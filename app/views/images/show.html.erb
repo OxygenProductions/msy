@@ -5,6 +5,11 @@
   <%= @image.name %>
 </p>
 
+<p>
+  <b>Image:</b>
+  <%= image_tag @image.image_url(:thumb).to_s %>
+</p>
+
 
 <%= link_to 'Edit', edit_image_path(@image) %> |
 <%= link_to 'Back', images_path %>

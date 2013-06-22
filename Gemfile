@@ -31,3 +31,5 @@ gem "stripe"
 gem "stripe_event"
 gem 'active_model_serializers'
 gem 'acts-as-taggable-on'
+gem "rmagick"
+gem "carrierwave"
