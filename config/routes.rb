@@ -1,4 +1,11 @@
 JewishEcards::Application.routes.draw do
+
+  resources :envelopes
+  resources :authors
+  resources :cards
+  resources :fields
+  resources :images
+
   mount StripeEvent::Engine => '/stripe'
   get "content/gold"
   get "content/silver"

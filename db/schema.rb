@@ -11,7 +11,72 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130621033013) do
+ActiveRecord::Schema.define(:version => 20130622025238) do
+
+  create_table "authors", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.text     "biography"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "cards", :force => true do |t|
+    t.string   "name"
+    t.boolean  "is_new"
+    t.string   "card_type"
+    t.integer  "envelope_id"
+    t.integer  "author_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "cards", ["author_id"], :name => "index_cards_on_author_id"
+
+  create_table "envelopes", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "fields", :force => true do |t|
+    t.string   "name"
+    t.string   "field_type"
+    t.string   "region"
+    t.boolean  "editable"
+    t.string   "font_family"
+    t.integer  "font_size"
+    t.integer  "letter_spacing"
+    t.integer  "word_spacing"
+    t.integer  "line_height"
+    t.boolean  "has_text_shadow"
+    t.string   "text_shadow"
+    t.string   "text_align"
+    t.string   "text"
+    t.integer  "card_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "fields", ["card_id"], :name => "index_fields_on_card_id"
+
+  create_table "images", :force => true do |t|
+    t.string   "image"
+    t.integer  "image_size"
+    t.string   "image_type"
+    t.string   "name"
+    t.integer  "card_id"
+    t.integer  "field_id"
+    t.integer  "author_id"
+    t.integer  "env_top_id"
+    t.integer  "env_bottom_id"
+    t.integer  "env_under_id"
+    t.integer  "env_thumb_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "images", ["card_id"], :name => "index_images_on_card_id"
 
   create_table "roles", :force => true do |t|
     t.string   "name"
