@@ -30,3 +30,4 @@ gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
 gem "stripe"
 gem "stripe_event"
 gem 'active_model_serializers'
+gem 'acts-as-taggable-on'
