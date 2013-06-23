@@ -34,3 +34,4 @@ gem 'acts-as-taggable-on'
 gem "rmagick"
 gem "carrierwave"
 gem "activeadmin"
+gem "simple-navigation"

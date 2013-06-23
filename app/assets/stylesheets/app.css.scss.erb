@@ -1,0 +1,90 @@
+$gutter_in: 16px;
+$gutter_out: 16px;
+$width: 1024px;
+$left: 250px;
+$right: $width - $gutter_in - 2*$gutter_out - $left;
+$bg: url(<%= asset_path 'bg.jpg' %>) no-repeat scroll center top #bed1ef;
+
+body {
+	background: $bg;
+	background-size: cover;
+}
+.wrapper {
+	width: $width;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.sidebar {
+	width: $left;
+	float: left;
+	margin: 0 $gutter_in $gutter_in $gutter_out;
+	overflow: hidden;
+}
+.right {
+	float: left;
+	width: $right;
+	margin-right: $gutter_out;
+	overflow: hidden;
+}
+.wrap, .cards, .main, .header, .footer {
+	clear: both;
+	overflow: hidden;
+}
+.top {
+	height: 100px;
+	background: #DDD;
+	margin-top: $gutter_in;
+	margin-bottom: $gutter_in;
+}
+.menu {
+	height: 50px;
+	background: #CCC;
+}
+.filter {
+	height: 50px;
+	background: #EEE;
+}
+.main {
+	min-height: 600px;
+	background: #FFF;
+	margin-bottom: $gutter_in;
+}
+.cards {
+	margin: $gutter_in $gutter_out;
+	background: #EEE;
+	height: 200px;
+}
+.subnav {
+	background: #CCC;
+	height: 100px;
+	margin-bottom: $gutter_in;
+}
+.tags {
+	height: 500px;
+	background: #BBB;
+	margin-bottom: $gutter_in;
+}
+.news {
+	background: #AAA;
+	height: 200px;
+	margin-bottom: $gutter_in;
+}
+.msgs {}
+.content {
+	border: 1px solid #888;
+	height: 300px;
+	box-sizing: border-box;
+	margin-bottom: $gutter_in;
+}
+.ads {
+	height: 300px;
+	background: #EEE;
+}
+.footer {
+	height: 300px;
+	background: #DDD;
+	margin-bottom: $gutter_in;
+}
+
+
+

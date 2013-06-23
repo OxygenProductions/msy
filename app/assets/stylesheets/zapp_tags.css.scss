@@ -1,0 +1,76 @@
+$bg: #020275;
+$text: #FFF;
+$size: 15px;
+$link_height: 35px;
+$heading_size: 17px;
+$width: 80px;
+$bg_ec: #622b8f;
+$bg_ec_hover: #7a3bae;
+$bg_ei: #721447;
+$bg_ei_hover: #8a2f60;
+$bg_d: #3951cf;
+$bg_d_hover: #465fe0;
+
+.tags {
+	background-color: $bg;
+	color: $text;
+	height: auto;
+	min-height: 500px;
+	.links {
+		a {
+			width: $width;
+			text-align: center;
+			line-height: $link_height;
+			display: inline-block;
+			box-sizing: border-box;
+		}
+		a:hover {
+			text-decoration: none;
+		}
+		.ec {
+			background-color: $bg_ec;
+			border: 2px solid $bg_ec_hover;
+		}
+		.ec:hover {
+			background-color: $bg_ec_hover;
+		}
+		.ei {
+			background-color: $bg_ei;
+			border: 2px solid $bg_ei_hover;
+		}
+		.ei:hover {
+			background-color: $bg_ei_hover;
+		}
+		.d {
+			background-color: $bg_d;
+			border: 2px solid $bg_d_hover;
+		}
+		.d:hover {
+			background-color: $bg_d_hover;
+		}
+	}
+	.list {
+		margin: 12px;
+		overflow: hidden;
+	}
+	ul {
+		margin: 0 0 12px 0;
+		padding: 0;
+	}
+	li {
+		list-style-type: none;
+		list-style-image: none;
+		margin: 0;
+		padding: 0;
+	}
+	h2 {
+		font-size: $heading_size;
+		font-weight: bold;
+		margin: 0;
+		line-height: $heading_size+10px;
+	}
+	a {
+		color: $text;
+		font-size: $size;
+	}
+}

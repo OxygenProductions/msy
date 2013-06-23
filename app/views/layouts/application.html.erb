@@ -10,26 +10,87 @@
     <%= yield(:head) %>
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
-    <div class="navbar navbar-fixed-top">
-      <nav class="navbar-inner">
-        <div class="container">
-          <%= render 'layouts/navigation' %>
-        </div>
-      </nav>
+    
+    <div class="wrapper">
+    
+    	<div class="header">
+		    	
+	    	<!-- top -->
+	    	<div class="top">
+	    		<%= render 'layouts/top' %>
+	    	</div>
+	    	
+	    	<!-- menu -->
+	    	<div class="menu">
+	    		<%= render 'layouts/menu' %>
+	    	</div>
+	    	
+	    	<!-- search/filter -->
+	    	<div class="filter">
+	    		<%= render 'layouts/filter' %>
+	    	</div>
+		    	
+    	</div>
+    	
+    	<div class="main">
+	    	
+	    	<!-- cards -->
+	    	<div class="cards">
+		    	<%= render 'layouts/cards' %>
+	    	</div>
+	    	
+	    	<!-- wrap -->
+	    	<div class="wrap">
+			    	
+		    	<!-- sidebar -->
+		    	<div class="sidebar">
+		    		<aside>
+			    		
+			    		<!-- subnav -->
+			    		<div class="subnav">
+				    		<%= render 'layouts/subnav' %>
+			    		</div>
+			    		
+			    		<!-- tags -->
+			    		<div class="tags">
+			    			<%= render 'layouts/tags' %>
+			    		</div>
+			    		
+			    		<!-- news -->
+			    		<div class="news">
+				    		<%= render 'layouts/news' %>
+			    		</div>
+			    		
+		    		</aside>
+		    	</div>
+		    	
+		    	<!-- content -->
+		    	<div class="right">
+		    		
+		    		<!-- messages -->
+		    		<div class="msgs">
+			    		<%= render 'layouts/messages' %>
+		    		</div>
+		    		
+		    		<div class="content">
+			    		<%= yield %>
+		    		</div>
+		    		
+		    		<div class="ads">
+		    			<%= render 'layouts/ads' %>
+		    		</div>
+		    		
+		    	</div>
+			    	
+	    	</div>
+	    	
+    	</div>
+    	
+    	<div class="footer">
+	    	<%= render 'layouts/footer' %>
+    	</div>
+    
     </div>
-    <div id="main" role="main">
-      <div class="container">
-        <div class="content">
-           <div class="row">
-            <div class="span12">
-              <%= render 'layouts/messages' %>
-              <%= yield %>
-            </div>
-          </div>
-          <footer>
-          </footer>
-        </div>
-      </div> <!--! end of .container -->
-    </div> <!--! end of #main -->
+  
   </body>
 </html>

@@ -1,0 +1,27 @@
+$bg_head: #041855;
+$head_size: 20px;
+
+$bg: #020275;
+$text: #FFF;
+
+$radius: 5px;
+
+@mixin radius($r) {
+	border-radius: $r;
+	-moz-border-radius: $r;
+	-webkit-border-radius: $r;
+}
+
+.news {
+	@include radius($radius);
+	background-color: $bg;
+	color: $text;
+	h2 {
+		@include radius($radius);
+		text-align: center;
+		background-color: $bg_head;
+		font-size: $head_size;
+		font-weight: normal;
+		margin: 0;
+	}
+}

@@ -1,0 +1,68 @@
+$width: (1024/9)*1px;
+$font-size: 17px;
+$height: 46px;
+
+$bg: #041855;
+$text: #FFF;
+
+$bg_hover: #DDD;
+$text_hover: #222;
+
+$bg_selected: #FFF;
+$bg_selected_hover: #FFF;
+$text_selected: #000;
+
+@mixin transition {
+	a {
+		transition: all .3s ease-out;
+		-moz-transition: all .3s ease-out;
+		-webkit-transition: all .3s ease-out;
+		-o-transition: all .3s ease-out;
+	}
+}
+
+@mixin menu {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		list-style-image: none;
+		background-color: $bg;
+	}
+	li {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		list-style-image: none;
+		display: inline-block;
+	}
+	a {
+		text-align: center;
+		line-height: $height;
+		display: inline-block;
+		width: $width;
+		color: $text;
+		font-size: $font-size;
+	}
+	a:hover {
+		text-decoration: none;
+		background-color: $bg_hover;
+		color: $text_hover;
+	}
+	li.selected {
+		a {
+			background: $bg_selected;
+			color: $text_selected;
+		}
+		a:hover {
+			background: $bg_selected_hover;
+		}
+	}
+}
+
+.menu {
+	@include menu;
+	@include transition;
+	height: $height;
+	background: $bg;
+}
