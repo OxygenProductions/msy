@@ -6,7 +6,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
-gem 'jquery-rails'
+gem "jquery-rails", "2.3.0"
 gem "thin", ">= 1.5.0", :group => :production
 gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
 gem "database_cleaner", ">= 1.0.0.RC1", :group => :test
@@ -33,3 +33,4 @@ gem 'active_model_serializers'
 gem 'acts-as-taggable-on'
 gem "rmagick"
 gem "carrierwave"
+gem "activeadmin"
