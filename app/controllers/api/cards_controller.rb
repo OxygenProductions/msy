@@ -1,10 +1,7 @@
 class Api::CardsController < ApplicationController
   
-<<<<<<< HEAD
-=======
   respond_to :json
-  
->>>>>>> theme
+
   def index
     respond_with Card.all
   end

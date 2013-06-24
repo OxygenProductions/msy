@@ -1,10 +1,7 @@
 class Api::FieldsController < ApplicationController
   
-<<<<<<< HEAD
-=======
   respond_to :json
   
->>>>>>> theme
   def index
     respond_with Field.all
   end

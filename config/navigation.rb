@@ -51,16 +51,6 @@ SimpleNavigation::Configuration.run do |navigation|
     #
     
     primary.item :home, 'Home', root_url
-<<<<<<< HEAD
-    primary.item :ecards, 'eCards', ecards_url
-    primary.item :einvites, 'eInvites', einvites_url
-    primary.item :downloads, 'Downloads', downloads_url
-    primary.item :calendar, 'Calendar', calendar_url
-    primary.item :about, 'About Us', about_url
-    primary.item :artists, 'Artists', artists_url
-    primary.item :contact, 'Contact Us', contact_url
-    primary.item :sign_in, 'Sign In', new_user_session_url
-=======
     primary.item :ecards, 'eCards', "/cards?card_filter%5Boptions%5D%5B%5D=eCards"
     primary.item :einvites, 'eInvites', "/cards?card_filter%5Boptions%5D%5B%5D=eInvites"
     primary.item :downloads, 'Downloads', "/cards?card_filter%5Boptions%5D%5B%5D=Downloads"
@@ -88,7 +78,6 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :contacts, 'Contact Us', contacts_url
     primary.item :sign_in, 'Sign In', new_user_session_url, :if => Proc.new { !user_signed_in? }
     primary.item :sign_out, 'Sign Out', destroy_user_session_url, :method => :delete, :if => Proc.new { user_signed_in? }
->>>>>>> theme
     
     #primary.item :home, 'Home', root_url, options
     #primary.item :ecards, 'eCards', ecards_url, options do |sub_nav|
