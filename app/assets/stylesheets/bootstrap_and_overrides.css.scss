@@ -1,3 +1,6 @@
 @import "bootstrap";
 body { padding-top: 0px; }
 @import "bootstrap-responsive";
+abbr[title], abbr[data-original-title] {
+	border-bottom: medium none;
+}

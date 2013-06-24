@@ -1,0 +1,28 @@
+<h1>Membership Plans</h1>
+
+<div class="row span8 plans">
+  <div class="span2 well">
+    <div class="plan"><h2>Silver</h2></div>
+    <ul class="unstyled">
+      <li>One lesson a month</li>
+    </ul>
+    <h3>$9/month</h3>
+    <%= link_to 'Subscribe', "/users/sign_up?plan=silver", :class => 'btn btn-normal' %>
+  </div>
+  <div class="span2 well featured">
+    <div class="plan featured-plan"><h2>Gold</h2></div>
+    <ul class="unstyled">
+      <li>Ten lessons a month</li>
+    </ul>
+    <h3>$19/month</h3>
+    <%= link_to 'Subscribe', "/users/sign_up?plan=gold", :class => 'btn btn-success' %>
+  </div>
+  <div class="span2 well">
+    <div class="plan"><h2>Platinum</h2></div>
+    <ul class="unstyled">
+      <li>Thirty lessons a month</li>
+    </ul>
+    <h3>$29/month</h3>
+    <%= link_to 'Subscribe', "/users/sign_up?plan=platinum", :class => 'btn btn-normal' %>
+  </div>
+</div>

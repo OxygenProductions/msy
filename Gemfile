@@ -34,4 +34,9 @@ gem 'acts-as-taggable-on'
 gem "rmagick"
 gem "carrierwave"
 gem "activeadmin"
+<<<<<<< HEAD
 gem "simple-navigation"
+=======
+gem "simple-navigation"
+gem "active_attr"
+>>>>>>> theme

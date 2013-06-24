@@ -51,6 +51,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #
     
     primary.item :home, 'Home', root_url
+<<<<<<< HEAD
     primary.item :ecards, 'eCards', ecards_url
     primary.item :einvites, 'eInvites', einvites_url
     primary.item :downloads, 'Downloads', downloads_url
@@ -59,6 +60,35 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :artists, 'Artists', artists_url
     primary.item :contact, 'Contact Us', contact_url
     primary.item :sign_in, 'Sign In', new_user_session_url
+=======
+    primary.item :ecards, 'eCards', "/cards?card_filter%5Boptions%5D%5B%5D=eCards"
+    primary.item :einvites, 'eInvites', "/cards?card_filter%5Boptions%5D%5B%5D=eInvites"
+    primary.item :downloads, 'Downloads', "/cards?card_filter%5Boptions%5D%5B%5D=Downloads"
+    primary.item :calendar, 'Calendar', calendar_url
+    primary.item :about, 'About Us', about_url do |sub_nav|
+    	sub_nav.item :title, 'More Information'
+    	sub_nav.item :about, 'About Us', about_url
+    	sub_nav.item :staff, 'About Our Staff', staff_url
+    	sub_nav.item :membership, 'Membership Info', membership_url
+    	sub_nav.item :terms, 'Terms & Conditions', terms_url
+    	sub_nav.item :privacy, 'Privacy Policy', privacy_url
+    	sub_nav.item :faqs, 'FAQs', faqs_url
+    	sub_nav.item :become, 'Become an eCard Artist', become_url
+    	sub_nav.item :help, 'Help', help_url
+    end
+    primary.item :artists, 'Artists', artists_url do |author_nav|
+    	author_nav.item :title, "Artists"
+    	Author.all.each do |author|
+    		author_nav.item :author, "#{author.first_name} #{author.last_name}", "/cards"
+    	end
+    end
+	  #primary.item :artists, 'Artists', artists_url do |author|
+	  #  author.item :author, @author.try(:name), url_for(@author)
+	  #end
+    primary.item :contacts, 'Contact Us', contacts_url
+    primary.item :sign_in, 'Sign In', new_user_session_url, :if => Proc.new { !user_signed_in? }
+    primary.item :sign_out, 'Sign Out', destroy_user_session_url, :method => :delete, :if => Proc.new { user_signed_in? }
+>>>>>>> theme
     
     #primary.item :home, 'Home', root_url, options
     #primary.item :ecards, 'eCards', ecards_url, options do |sub_nav|

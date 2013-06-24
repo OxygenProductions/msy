@@ -1,0 +1,11 @@
+<h1>Contact Us</h1>
+
+
+<%= simple_form_for @contact do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name, :autofocus => true %>
+  <%= f.input :email %>
+  <%= f.input :content, as: :text %>
+  <%= f.button :submit, 'Send', :class => 'btn' %>
+<% end %>
+  

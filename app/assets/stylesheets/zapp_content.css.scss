@@ -1,0 +1,26 @@
+$bg: #f5f5eb;
+$border: 3px solid #eae9e9;
+$radius: 10px;
+$padding: 20px;
+
+.content {
+	height: auto;
+	box-sizing: border-box;
+	background: $bg;
+	border: $border;
+	border-radius: $radius;
+	padding: $padding;
+	overflow: hidden;
+	overflow-x: scroll;
+	.new_contact {
+		.controls {
+			.string {
+				width: 50%;
+			}
+			.text {
+				width: 98%;
+				height: 120px;
+			}	
+		}
+	}
+}

@@ -1,0 +1,41 @@
+$link_color: #622b8f;
+$title_color: #041855;
+$size: 15px;
+$margin_side: 58px;
+$margin_bottom: 35px;
+
+.ads {
+	background: transparent;
+	height: auto;
+	.text {
+		h2 {
+			color: $title_color;
+			float: left;
+			margin: 0;
+			padding: 0;
+			font-size: $size;
+		}
+		h3 {
+			float: right;
+			margin: 0;
+			padding: 0;
+			font-size: $size;
+			font-weight: normal;
+			a {
+				color: $link_color;
+			}
+		}	
+	}
+	.list {
+		.ad {
+			display: inline-block;
+			margin: 0 $margin_side $margin_bottom 0;
+		}
+		.ad.first {
+			margin-left: 0;
+		}
+		.ad.last {
+			margin-right: 0;
+		}
+	}
+}

@@ -3,7 +3,7 @@ $text: #FFF;
 $size: 15px;
 $link_height: 35px;
 $heading_size: 17px;
-$width: 80px;
+$width: 84px;
 $bg_ec: #622b8f;
 $bg_ec_hover: #7a3bae;
 $bg_ei: #721447;
@@ -16,13 +16,17 @@ $bg_d_hover: #465fe0;
 	color: $text;
 	height: auto;
 	min-height: 500px;
+	overflow: hidden;
+	border-radius: 5px;
 	.links {
+		overflow: hidden;
 		a {
 			width: $width;
 			text-align: center;
 			line-height: $link_height;
 			display: inline-block;
 			box-sizing: border-box;
+			float: left;
 		}
 		a:hover {
 			text-decoration: none;
@@ -30,6 +34,7 @@ $bg_d_hover: #465fe0;
 		.ec {
 			background-color: $bg_ec;
 			border: 2px solid $bg_ec_hover;
+			border-radius: 5px 0 0 0;
 		}
 		.ec:hover {
 			background-color: $bg_ec_hover;
@@ -44,6 +49,8 @@ $bg_d_hover: #465fe0;
 		.d {
 			background-color: $bg_d;
 			border: 2px solid $bg_d_hover;
+			border-radius: 0 5px 0 0;
+			width: 82px;
 		}
 		.d:hover {
 			background-color: $bg_d_hover;
@@ -52,6 +59,7 @@ $bg_d_hover: #465fe0;
 	.list {
 		margin: 12px;
 		overflow: hidden;
+		clear: both;
 	}
 	ul {
 		margin: 0 0 12px 0;

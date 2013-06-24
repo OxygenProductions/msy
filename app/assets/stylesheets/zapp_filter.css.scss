@@ -1,9 +1,59 @@
 $bg: #0543d2;
 $text: #FFF;
 $height: 34px;
+$radius: 10px;
+$top: 154px;
+$padding: 8px 0 0 0;
 
 .filter {
 	background-color: $bg;
 	height: $height;
 	color: $text;
+	border-radius: 0 0 $radius $radius;
+	top: $top;
+	padding: $padding;
+	position: absolute;
+	width: 100%;
+	z-index: 3;
+	label {
+		font-size: 15px;
+	}
+	.control-label {
+		display: inline-block;
+	}
+	.card_filter_options {
+		display: inline-block;
+		margin: 2px 25px;
+	}
+	.card_filter_search {
+		display: inline-block;
+	}
+	.card_filter_author {
+		display: inline-block;
+	}
+	.controls {
+		display: inline-block;
+		.checkbox {
+			display: inline-block;
+			margin: 0 10px;
+		}
+		.string {
+			margin: 0 15px;
+			padding: 0;
+			border-radius: 0;
+			position: relative;
+			top: -1px;
+		}
+		.select {
+			width: 120px;
+			position: relative;
+			top: 2px;
+			margin-right: 12px;
+		}
+	}
+	.btn {
+		padding: 0 6px;
+		position: relative;
+		top: -1px;
+	}
 }

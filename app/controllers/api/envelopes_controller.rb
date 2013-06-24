@@ -1,5 +1,10 @@
 class Api::EnvelopesController < ApplicationController
   
+<<<<<<< HEAD
+=======
+  respond_to :json
+  
+>>>>>>> theme
   def index
     respond_with Envelope.all
   end

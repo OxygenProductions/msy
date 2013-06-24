@@ -1,5 +1,10 @@
 class Api::AuthorsController < ApplicationController
   
+<<<<<<< HEAD
+=======
+  respond_to :json
+  
+>>>>>>> theme
   def index
     respond_with Author.all
   end

@@ -4,6 +4,7 @@ $width: 1024px;
 $left: 250px;
 $right: $width - $gutter_in - 2*$gutter_out - $left;
 $bg: url(<%= asset_path 'bg.jpg' %>) no-repeat scroll center top #bed1ef;
+$radius: 5px;
 
 body {
 	background: $bg;
@@ -26,9 +27,14 @@ body {
 	margin-right: $gutter_out;
 	overflow: hidden;
 }
-.wrap, .cards, .main, .header, .footer {
+.wrap, body .cards, .main, .header, .footer {
 	clear: both;
 	overflow: hidden;
+}
+.header {
+	position: relative;
+	overflow: visible;
+	z-index: 2;
 }
 .top {
 	height: 100px;
@@ -39,17 +45,24 @@ body {
 .menu {
 	height: 50px;
 	background: #CCC;
+	position: relative;
+	z-index: 4;
 }
 .filter {
 	height: 50px;
 	background: #EEE;
+	
 }
 .main {
 	min-height: 600px;
 	background: #FFF;
 	margin-bottom: $gutter_in;
+	border-radius: 0 0 $radius $radius;
+	position: relative;
+	z-index: 1;
+	padding-top: 35px;
 }
-.cards {
+body .cards {
 	margin: $gutter_in $gutter_out;
 	background: #EEE;
 	height: 200px;

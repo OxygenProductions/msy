@@ -1,1 +1,14 @@
+<<<<<<< HEAD
 <section>{Filter}</section>
+=======
+<section>
+	
+	<%= simple_form_for :card_filter, :url => '/cards', :method => 'get' do |f| %>
+	  <%= f.input :options, required: false, as: :check_boxes, label: "Search For:", collection: ['eCards', 'eInvites', 'New Cards', 'Downloads'], checked: @options %>
+	  <%= f.input :author, required: false, collection: Author.all, include_blank: "Artist", label: false, selected: @author %>
+	  <%= f.input :search, required: false, :input_html => { :value => @search } %>
+	  <%= f.button :submit, value: "Go" %>
+	<% end %>
+	
+</section>
+>>>>>>> theme

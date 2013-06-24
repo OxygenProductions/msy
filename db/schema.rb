@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130623001943) do
+ActiveRecord::Schema.define(:version => 20130623230354) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20130623001943) do
     t.text     "biography"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "name"
   end
 
   create_table "cards", :force => true do |t|
@@ -60,8 +61,12 @@ ActiveRecord::Schema.define(:version => 20130623001943) do
     t.string   "card_type"
     t.integer  "envelope_id"
     t.integer  "author_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.string   "thumbnail"
+    t.string   "thumbnail_name"
+    t.string   "thumbnail_type"
+    t.integer  "thumbnail_size"
   end
 
   add_index "cards", ["author_id"], :name => "index_cards_on_author_id"
@@ -101,12 +106,11 @@ ActiveRecord::Schema.define(:version => 20130623001943) do
     t.integer  "card_id"
     t.integer  "field_id"
     t.integer  "author_id"
-    t.integer  "env_top_id"
-    t.integer  "env_bottom_id"
-    t.integer  "env_under_id"
     t.integer  "env_thumb_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "envelope_id"
+    t.string   "envelope_type"
   end
 
   add_index "images", ["card_id"], :name => "index_images_on_card_id"

@@ -12,17 +12,26 @@ JewishEcards::Application.routes.draw do
 	  resources :images
   end
   
+  get "cards",			to: "cards#index"
+  get "plans",			to: "pages#plans"
+  
+  
   #pages
   get "ecards", 		to: "pages#ecards"
   get "einvites", 	to: "pages#einvites"
   get "downloads", 	to: "pages#downloads"
   get "calendar",		to: "pages#calendar"
   get "about", 			to: "pages#about"
+  	get "staff",			to: "pages#staff"
+  	get "membership",	to: "pages#membership"
+  	get "faqs",				to: "pages#faqs"
+  	get "become",			to: "pages#become"
+  	get "privacy",	 	to: "pages#privacy"
+  	get "terms", 			to: "pages#terms" 
+  	get "help",				to: "pages#help"
   get "artists", 		to: "pages#artists"
-  get "contact",		to: "pages#contact"
-  get "privacy",	 	to: "pages#privacy"
-  get "terms", 			to: "pages#terms"
-  
+  get "contacts",		to: "contacts#new"
+  post "contacts",		to: "contacts#create"
 
   #stripe mount
   mount StripeEvent::Engine => '/stripe'

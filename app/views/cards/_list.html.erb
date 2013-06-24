@@ -1,0 +1,20 @@
+<div class="list">
+
+	<% for card in @cards %>
+		<div class="card">
+			<div class="image">
+				<%= image_tag card.thumbnail_url %>
+			</div>
+			<% if card.author %>
+				<span class="author"><%= card.author.first_name %> <%= card.author.last_name %></span>
+			<% end %>
+		</div>
+	<% end %>
+	
+  <%= paginate @cards %>
+	
+</div>
+
+<div class="preview">
+	
+</div>
