@@ -20,7 +20,7 @@ JewishEcards::Application.routes.draw do
   get "ecards", 		to: "pages#ecards"
   get "einvites", 	to: "pages#einvites"
   get "downloads", 	to: "pages#downloads"
-  get "calendar",		to: "pages#calendar"
+  get "calendar",		to: "calendar#index"
   get "about", 			to: "pages#about"
   	get "staff",			to: "pages#staff"
   	get "membership",	to: "pages#membership"
