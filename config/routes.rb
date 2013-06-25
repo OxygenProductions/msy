@@ -29,7 +29,8 @@ JewishEcards::Application.routes.draw do
   	get "privacy",	 	to: "pages#privacy"
   	get "terms", 			to: "pages#terms" 
   	get "help",				to: "pages#help"
-  get "artists", 		to: "pages#artists"
+  get "artists", 	 	  to: "artists#index"
+  get "artists/:id",  to: "artists#show", :as => :artist
   get "contacts",		to: "contacts#new"
   post "contacts",		to: "contacts#create"
 

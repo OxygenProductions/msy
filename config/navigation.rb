@@ -69,7 +69,7 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :artists, 'Artists', artists_url do |author_nav|
     	author_nav.item :title, "Artists"
     	Author.all.each do |author|
-    		author_nav.item :author, "#{author.first_name} #{author.last_name}", "/cards"
+    		author_nav.item :author, "#{author.first_name} #{author.last_name}", artist_path(author.id)
     	end
     end
 	  #primary.item :artists, 'Artists', artists_url do |author|
