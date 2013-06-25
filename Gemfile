@@ -6,7 +6,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
-gem "jquery-rails", "2.3.0"
+gem 'jquery-rails', '~> 2.3'
 gem "thin", ">= 1.5.0", :group => :production
 gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
 gem "database_cleaner", ">= 1.0.0.RC1", :group => :test
@@ -36,3 +36,6 @@ gem "carrierwave"
 gem "activeadmin"
 gem "simple-navigation"
 gem "active_attr"
+gem 'ember-rails'
+gem 'ember-source', '1.0.0.rc5' # or the version you need
+gem 'handlebars-source', '1.0.0.rc4' # or the version you need

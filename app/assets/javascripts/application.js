@@ -13,4 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require handlebars
+//= require ember
+//= require ember-data
+//= require_self
+//= require jewish_ecards
+
+// for more details see: http://emberjs.com/guides/application/
+JE = Ember.Application.create({
+	rootElement: '#app'
+});
+
 //= require_tree .

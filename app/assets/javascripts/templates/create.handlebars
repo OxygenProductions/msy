@@ -1,0 +1,18 @@
+<div class="create card-editor">
+
+	<div class="nav">
+		<button class="btn" {{action setState "cover"}}>Cover</button>
+		<button class="btn" {{action setState "inside"}}>Inside</button>
+	</div>
+	
+	<div class="boundry">
+		{{#each fields}}
+			{{render field this}}
+		{{/each}}
+	</div>
+	
+	<div class="options">
+		{{render options field}}
+	</div>
+
+</div>

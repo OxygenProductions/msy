@@ -1,0 +1,1 @@
+JE.OptionsView = Ember.View.extend()

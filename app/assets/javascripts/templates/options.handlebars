@@ -1,0 +1,26 @@
+{{#if id}}
+{{else}}
+	<button class="btn" {{action newField}}>New Field</button>
+{{/if}}
+
+<label>Text:</label>
+{{textarea valueBinding="text"}}
+
+<label>Text Size:</label>
+{{view JE.PlusMinusView valueBinding="fontSize"}}
+
+<label>Line Height:</label>
+{{view JE.PlusMinusView valueBinding="lineHeight"}}
+
+<label>Letter Spacing:</label>
+{{view JE.PlusMinusView valueBinding="LetterSpacing"}}
+
+<label>Word Spacing:</label>
+{{view JE.PlusMinusView valueBinding="WordSpacing"}}
+
+<label>Text Align:</label>
+{{view JE.AlignView valueBinding="textAlign"}}
+
+<label>{{input type="checkbox" checkedBinding="hasTextShadow"}} Text Shadow?</label>
+
+<label>{{input type="checkbox" checkedBinding="editable"}} Editable?</label>

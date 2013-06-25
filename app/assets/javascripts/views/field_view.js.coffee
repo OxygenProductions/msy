@@ -1,0 +1,1 @@
+JE.FieldView = Ember.View.extend()

@@ -1,0 +1,1 @@
+JE.ApplicationController = Ember.Controller.extend()
