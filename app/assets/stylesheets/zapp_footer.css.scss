@@ -1,5 +1,75 @@
+$head: #353435;
+$head_size: 15px;
+$color: #04155c;
+$color_hover: #FFF;
+$link_size: 13px;
+$border: 1px solid #FFF;
+$padding_vert: 30px;
+$padding_horz: 0;
+$padding_inner: 10px;
+$padding: 12px;
+$height: 230px;
+
 .footer {
 	background: transparent;
 	height: auto;
 	min-height: 300px;
+	.links {
+		border-top: $border;
+		border-bottom: $border;
+		padding: $padding_vert $padding_horz;
+		margin: 30px 0;
+		.column {
+			display: inline-block;
+			vertical-align: top;
+			padding: $padding;
+			height: $height;
+			border-right: $border;
+			h2 {
+				color: $head;
+				font-size: $head_size;
+				line-height: $head_size;
+				margin: 0 0 10px 0;
+				padding: 0;
+			}
+			ul {
+				margin: 0 0 $padding 0;
+				padding: 0 $padding_inner 0 0;
+				display: inline-block;
+				vertical-align: top;
+				li {
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					a {
+						color: $color;
+						font-size: $link_size;
+					}
+					a:hover {
+						color: $color_hover;
+					}
+				}
+			}
+			ul.first {}
+			ul.last {}
+		}
+		.column.first {}
+		.column.last {
+			border-right: medium none;
+			margin-right: 0;
+			padding-right: 0;
+		}
+	}
+	.bottom {
+		overflow: hidden;
+		margin-bottom: 50px;
+		.copy {
+			color: $color;
+			float: left;
+		}
+		.website {
+			color: $color;
+			float: right;
+		}
+	}
 }
