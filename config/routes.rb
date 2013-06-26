@@ -4,17 +4,13 @@ JewishEcards::Application.routes.draw do
   root :to => "pages#index"
   
   #ember api
-  namespace :api do 
-	  resources :envelopes
-	  resources :authors
-	  resources :cards
-	  resources :fields
-	  resources :images
-  end
+	resources :cards
+	resources :fields
   
-  get "cards",			to: "cards#index"
+  #get "cards",			to: "cards#index"
   get "plans",			to: "pages#plans"
   
+  post "upload",			to: "upload#create"
   
   #pages
   get "ecards", 		to: "pages#ecards"

@@ -3,23 +3,21 @@ JE.AlignView = Ember.View.extend
 	
 	value: null
 	
-	test: "left"
-	
 	setVal: (val)->
-		@set 'test', val
+		@set 'value', val
 		
 	aL: (-> 
-    @get("test") == 'left'
-  ).property("test")
+    @get("value") == 'left'
+  ).property("value")
   
   aC: (-> 
-    @get("test") == 'center'
-  ).property("test")
+    @get("value") == 'center'
+  ).property("value")
   
   aR: (-> 
-    @get("test") == 'right'
-  ).property("test")
+    @get("value") == 'right'
+  ).property("value")
   
   aJ: (-> 
-    @get("test") == 'justified'
-  ).property("test")
+    @get("value") == 'justified'
+  ).property("value")

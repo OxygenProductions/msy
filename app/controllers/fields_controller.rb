@@ -1,9 +1,9 @@
-class Api::FieldsController < ApplicationController
+class FieldsController < ApplicationController
   
   respond_to :json
   
   def index
-    respond_with Field.all
+    respond_with Field.find(params[:ids])
   end
 
   def show

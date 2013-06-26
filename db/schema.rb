@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130625103447) do
+ActiveRecord::Schema.define(:version => 20130626094843) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -99,6 +99,8 @@ ActiveRecord::Schema.define(:version => 20130625103447) do
     t.integer  "left"
     t.integer  "width"
     t.integer  "height"
+    t.string   "color"
+    t.string   "bg"
   end
 
   add_index "fields", ["card_id"], :name => "index_fields_on_card_id"

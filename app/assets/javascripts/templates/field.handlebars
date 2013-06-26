@@ -1,3 +1,10 @@
-<div class="field">
-	Field
+<div class="field" {{bindAttr style="theStyle"}} {{action fieldSelect this on="mouseDown"}}>
+	<div {{bindAttr class="isActive:active"}}>
+		<div class="text">{{text}}</div>
+		{{#if hasImage}}
+			<div class="image">
+				<img {{bindAttr src="theImage"}} />
+			</div>
+		{{/if}}
+	</div>
 </div>

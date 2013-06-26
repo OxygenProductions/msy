@@ -1,23 +1,25 @@
 JE.Field = DS.Model.extend
-	fieldType: DS.attr "string"
-	name: DS.attr "string"
-	region: DS.attr "string"
-	top: DS.attr "string"
-	left: DS.attr "string"
-	width: DS.attr "string"
-	height: DS.attr "string"
 	
-	image: DS.attr "string"
-	fontFamily: DS.attr "string"
+	name: DS.attr "string", defaultValue: "field"
+	region: DS.attr "string", defaultValue: "cover"
+	top: DS.attr "string", defaultValue: 10
+	left: DS.attr "string", defaultValue: 10
+	width: DS.attr "string", defaultValue: 200
+	height: DS.attr "string", defaultValue: 50
 	
-	editable: DS.attr "boolean"
-	hasTextShadow: DS.attr "boolean"
-	textAlign: DS.attr "string"
-	letterSpacing: DS.attr "number"
-	lineHeight: DS.attr "number"
-	text: DS.attr "string"
-	fontSize: DS.attr "number"
-	textShadow: DS.attr "string"
-	wordSpacing: DS.attr "string"
+	fontFamily: DS.attr "string", defaultValue: "helvetica"
+	
+	image: DS.attr "string", defaultValue: ""
+	color: DS.attr "string", defaultValue: "#888"
+	bg: DS.attr "string", defaultValue: "#FFF"
+	editable: DS.attr "boolean", defaultValue: false
+	hasTextShadow: DS.attr "boolean", defaultValue: false
+	textAlign: DS.attr "string", defaultValue: "left"
+	letterSpacing: DS.attr "number", defaultValue: 1
+	lineHeight: DS.attr "number", defaultValue: 20
+	text: DS.attr "string", defaultValue: "Enter text here"
+	fontSize: DS.attr "number", defaultValue: 20
+	textShadow: DS.attr "string", defaultValue: "#000"
+	wordSpacing: DS.attr "number", defaultValue: 1
 	
 	card: DS.belongsTo "JE.Card"

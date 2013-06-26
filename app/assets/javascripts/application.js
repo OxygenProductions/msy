@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
+//= require spectrum
+//= require fineuploader
 //= require bootstrap
 //= require handlebars
 //= require ember

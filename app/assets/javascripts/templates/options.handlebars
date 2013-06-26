@@ -1,26 +1,63 @@
+<div class="actions">
+	<div class="btn-group">
+		{{#if isDirty}}
+			<button class="btn btn-success" {{action save}}>Save</button>
+		{{/if}}
+		{{#if id}}
+			{{#if isDirty}}
+			{{else}}
+				<button class="btn" {{action fieldDeselect}}>Deselect</button>
+			{{/if}}
+			<button class="btn btn-danger" {{action fieldRemove}}>Remove</button>
+		{{else}}
+			<button class="btn" {{action fieldNew}}>New Field</button>
+		{{/if}}
+	</div>
+</div>
+
 {{#if id}}
-{{else}}
-	<button class="btn" {{action newField}}>New Field</button>
+	<div class="tools">
+		
+		<label>{{input type="checkbox" checkedBinding="editable"}} Editable?</label>
+		
+		<label>Background Color:</label>
+		{{view JE.ColorpickerView valueBinding="bg"}}
+		
+		<label>Image:</label>
+		{{view JE.UploadView valueBinding="image" fieldIdBinding="id"}}
+		
+		<label>Text:</label>
+		{{textarea valueBinding="text"}}
+		
+		{{#if text}}
+			
+			<label>Text Color:</label>
+			{{view JE.ColorpickerView valueBinding="color"}}
+			
+			<label>{{input type="checkbox" checkedBinding="hasTextShadow"}} Text Shadow?</label>
+			
+			{{#if hasTextShadow}}
+				{{view JE.ColorpickerView valueBinding="textShadow"}}
+			{{/if}}
+			
+			<label>Text Size:</label>
+			{{view JE.PlusMinusView valueBinding="fontSize"}}
+			
+			<label>Line Height:</label>
+			{{view JE.PlusMinusView valueBinding="lineHeight"}}
+			
+			<label>Letter Spacing:</label>
+			{{view JE.PlusMinusView valueBinding="letterSpacing"}}
+			
+			<label>Word Spacing:</label>
+			{{view JE.PlusMinusView valueBinding="wordSpacing"}}
+			
+			<label>Text Align:</label>
+			{{view JE.AlignView valueBinding="textAlign"}}
+			
+		{{/if}}
+		
+		
+		
+	</div>
 {{/if}}
-
-<label>Text:</label>
-{{textarea valueBinding="text"}}
-
-<label>Text Size:</label>
-{{view JE.PlusMinusView valueBinding="fontSize"}}
-
-<label>Line Height:</label>
-{{view JE.PlusMinusView valueBinding="lineHeight"}}
-
-<label>Letter Spacing:</label>
-{{view JE.PlusMinusView valueBinding="LetterSpacing"}}
-
-<label>Word Spacing:</label>
-{{view JE.PlusMinusView valueBinding="WordSpacing"}}
-
-<label>Text Align:</label>
-{{view JE.AlignView valueBinding="textAlign"}}
-
-<label>{{input type="checkbox" checkedBinding="hasTextShadow"}} Text Shadow?</label>
-
-<label>{{input type="checkbox" checkedBinding="editable"}} Editable?</label>
