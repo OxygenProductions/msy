@@ -1,0 +1,25 @@
+<h1 class="ind3">Slideshows</h1>
+
+<div id="tag_cloud">
+  <% tag_cloud Slideshow.slideshow_tag_counts, %w{s m l} do |tag, css_class| %>
+    <%= link_to tag.name, "/slideshow?tag=#{tag.name}", class: css_class %>
+  <% end %>
+  <%= link_to 'All Slideshows', slideshow_url, :class => 'all' %>
+</div>
+
+<div class="slideshows resource-list">
+	<% for slideshow in @slideshows %>
+		<div class="slideshow list-item">
+			<a href="/slideshow/<%= slideshow.id %>" title="<%= slideshow.title %>">
+				<div class="image">
+					<%= image_tag url_for_cdn(slideshow.image.url(:thumb)) %>
+				</div>
+				<div class="overlay"></div>
+				<div class="title">
+					<%= slideshow.title %>
+				</div>
+			</a>
+		</div>
+	<% end %>
+	<%= paginate @slideshows %>
+</div>

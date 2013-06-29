@@ -1,8 +1,8 @@
 # Be sure to restart your server when you modify this file.
 
-JewishEcards::Application.config.session_store :cookie_store, key: '_jewish-ecards_session'
+Msy::Application.config.session_store :cookie_store, key: '_msy_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rails generate session_migration")
-# JewishEcards::Application.config.session_store :active_record_store
+# Msy::Application.config.session_store :active_record_store

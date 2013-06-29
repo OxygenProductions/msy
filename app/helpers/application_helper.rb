@@ -11,5 +11,11 @@ module ApplicationHelper
     HTML
     html.html_safe
   end
+  
+  def url_for_cdn(url)
+    url = url.gsub(/https:\/\/markstephensyoga.s3.amazonaws.com/, 'http://dg6lv62o2y57c.cloudfront.net
+')
+    url_for url
+  end
 
 end

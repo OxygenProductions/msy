@@ -1,0 +1,18 @@
+<div class="player workshop-player">
+	<h2><%= @workshop.title %></h2>
+	<div class="w-summary">
+		<%= raw @workshop.summary %>
+		<span class="more">See More...</span>
+	</div>
+	<div class="w-content">
+		<%= raw @workshop.content %>
+		<span class="less">See Less</span>
+	</div>
+</div>
+
+<h1>Workshops</h1>
+
+<%= render 'workshops/calendar' %>
+
+<h1>Booking Mark</h1>
+<%= render 'workshops/booking' %>

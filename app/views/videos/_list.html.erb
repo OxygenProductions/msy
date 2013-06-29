@@ -1,0 +1,25 @@
+<h1 class="ind3">Videos</h1>
+
+<div id="tag_cloud">
+  <% tag_cloud Video.video_tag_counts, %w{s m l} do |tag, css_class| %>
+    <%= link_to tag.name, "/video?tag=#{tag.name}", class: css_class %>
+  <% end %>
+  <%= link_to 'All Videos', video_url, :class => 'all' %>
+</div>
+
+<div class="videos resource-list">
+	<% for video in @videos %>
+		<div class="video list-item">
+			<a href="/video/<%= video.id %>" title="<%= video.title %>">
+				<div class="image">
+					<%= image_tag url_for_cdn(video.image.url(:thumb)) %>
+				</div>
+				<div class="overlay"></div>
+				<div class="title">
+					<%= video.title %>
+				</div>
+			</a>
+		</div>
+	<% end %>
+	<%= paginate @videos %>
+</div>

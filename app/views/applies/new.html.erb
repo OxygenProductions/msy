@@ -1,0 +1,61 @@
+<h1>Application</h1>
+
+
+<%= simple_form_for @apply do |f| %>
+  <%= f.error_notification %>
+  
+  <fieldset>
+  	<legend>Personal Info</legend>
+	  <%= f.input :program, as: :radio_buttons, collection: ['RYT 200', 'RYT 500', 'In-Depth Studies Only'], label: 'Intended Participation Level'  %>
+	  <%= f.input :name %>
+	  <%= f.input :nickname %>
+	  <%= f.input :address %>
+	  <%= f.input :city %>
+	  <%= f.input :state %>
+	  <%= f.input :zip %>
+	  <%= f.input :phone %>
+	  <%= f.input :email %>
+	  <%= f.input :website %>
+  </fieldset>
+  
+  <fieldset>
+  	<legend>Emergency Contact Info</legend>
+  	<%= f.input :em_name, label: 'Name' %>
+  	<%= f.input :em_rel, label: 'Relationship' %>
+  	<%= f.input :em_phone, label: 'Phone' %>
+  </fieldset>
+  
+  <fieldset>
+  	<legend>Health</legend>
+  	<%= f.input :health, as: :check_boxes, collection: ['Arthritis','Back Trouble','Epilepsy','Eye Problems','Diabetes','Hearing Problems','Heart Trouble','Hiatus Hernia','High or Low Blood Pressure','Migraine Headaches','Joint Sprains','Joint Dislocations','Respiratory Complaints'], label: 'Health' %>
+  	<p>Please describe any physical or mental health conditions that might affect your participation in this program. List any medication you are presently taking. List any surgeries you have undergone in the past ten years. List any chronic pain, joint strain, muscle strain or other physical issues that you presently have or ever feel in the course of a normal day or in practicing yoga. Indicate if you are pregnant or recently gave birth (within the past 18 months). Please attach additional sheets of paper as necessary to provide accurate and complete information as requested here. Please feel free to add any other health-related information you wish to bring to our attention. Do you or have you ever had any of the following? If so, describe below.</p>
+  	<%= f.input :health_dscr, label: 'Description', as: :text %>
+  </fieldset>
+  
+  <fieldset>
+  	<legend>Yoga Experience</legend>
+  	<%= f.input :exp_1, as: :text, label: 'How long have you been consistently practicing yoga?' %>
+  	<%= f.input :exp_2, as: :text, label: 'What types of yoga have you practiced? Please indicate how long you have practiced each type' %>
+  	<%= f.input :exp_3, as: :text, label: 'How often do you practice? Please indicate how often you attend a class, practice at home, with friends, etc' %>
+  	<%= f.input :exp_4, as: :text, label: 'Please list the name(s) of your current yoga teacher(s)' %>
+  	<%= f.input :exp_5, as: :text, label: 'What yoga teachers have most influenced your practice? Please briefly summarize their influence on your practice' %>
+  	<%= f.input :exp_6, as: :text, label: 'List yoga workshops you have attended in the last three years. Please give approximate date, venue and instruction.' %>
+  	<%= f.input :exp_7, as: :text, label: 'List titles and authors of yoga books you have read (continue on a separate sheet if necessary)' %>
+  	<%= f.input :exp_8, as: :text, label: 'Have you previously participated in a yoga teacher training program? If so, please indicate when, where and with whom' %>
+  	<%= f.input :exp_9, as: :text, label: 'Do you currently teach yoga? If so, please indicate dates, location and style.' %>
+  	<%= f.input :exp_10, as: :text, label: 'What first motivated you to practice yoga?' %>
+  	<%= f.input :exp_11, as: :text, label: 'Why do you practice yoga now?' %>
+  	<%= f.input :exp_12, as: :text, label: 'What are your main interests or hobbies outside of yoga?' %>
+  	<%= f.input :exp_13, as: :text, label: 'What qualities (from your education, work experience, life experience) do you think you would bring to this program?' %>
+  	<%= f.input :exp_14, as: :text, label: 'What are your goals in this program?' %>
+  </fieldset>
+  
+  <fieldset>
+	  <legend>Declaration</legend>
+	  <%= f.input :agree, as: :check_boxes, label: '', collection: ['agree'] %>
+	  <p>I have read and understand this entire application and the terms and conditions covered in the complete Vinyasa Flow Yoga Teacher Training and In-Depth Studies Program description. The facts set forth in this application are, to the best of my knowledge, true and complete</p>
+  </fieldset>
+  
+  
+  <%= f.button :submit, 'Apply', :class => 'btn' %>
+<% end %>

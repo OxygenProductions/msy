@@ -1,0 +1,13 @@
+<div class="video-player">
+	<h2><%= @audio.title %></h2>
+	<div class="audio-player">
+		<%= videojs_rails source: @audio.audio, width:"850px" %>
+	</div>
+</div>
+
+<%= render 'audios/list' %>
+
+<% content_for :side do %>
+  <h2 class="ind2">Links</h2>
+	<%= render 'layouts/subnav' %> 
+<% end %>

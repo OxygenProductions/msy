@@ -1,0 +1,37 @@
+
+form {
+	
+	input.string {
+		padding: 10px;
+		min-width: 400px;
+		border-radius: 3px;
+		box-shadow: 1px 1px 3px #CCC inset;
+		font-size: 20px;
+		color: #888;
+	}
+	
+	textarea.text {
+		padding: 10px;
+		border-radius: 3px;
+		box-shadow: 1px 1px 3px #CCC inset;
+		font-size: 20px;
+		color: #888;
+		height: 180px;
+		width: 600px;
+	}
+	
+	abbr[title], abbr[data-original-title] {
+		border-bottom: medium none;
+	}
+	
+	label {
+		margin-bottom: 12px;
+		font-size: 20px;
+		color: #888;
+	}
+	
+	input.btn {
+		padding: 10px 50px;
+	}
+	
+}

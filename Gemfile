@@ -6,6 +6,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
+  gem 'jquery-ui-rails'
 end
 gem "jquery-rails", "2.3.0"
 gem "thin", ">= 1.5.0", :group => :production
@@ -35,3 +36,12 @@ gem 'acts-as-taggable-on'
 gem "rmagick"
 gem "carrierwave"
 gem "activeadmin"
+gem "simple-navigation"
+gem "fog"
+#gem "carrierwave_direct"
+gem 'carrierwave_backgrounder'
+gem "sidekiq"
+gem "videojs_rails"
+gem "active_attr"
+gem "ckeditor"
+gem "mini_magick"

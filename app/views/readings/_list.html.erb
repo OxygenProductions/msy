@@ -1,0 +1,25 @@
+<h1 class="ind3">Readings</h1>
+
+<div id="tag_cloud">
+  <% tag_cloud Reading.reading_tag_counts, %w{s m l} do |tag, css_class| %>
+    <%= link_to tag.name, "/reading?tag=#{tag.name}", class: css_class %>
+  <% end %>
+  <%= link_to 'All Readings', reading_url, :class => 'all' %>
+</div>
+
+<div class="readings resource-list">
+	<% for reading in @readings %>
+		<div class="reading list-item">
+			<a href="/reading/<%= reading.id %>" title="<%= reading.title %>">
+				<div class="image">
+					<%= image_tag url_for_cdn(reading.image.url(:thumb)) %>
+				</div>
+				<div class="overlay"></div>
+				<div class="title">
+					<%= reading.title %>
+				</div>
+			</a>
+		</div>
+	<% end %>
+	<%= paginate @readings %>
+</div>
