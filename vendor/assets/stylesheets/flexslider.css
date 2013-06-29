@@ -1,0 +1,97 @@
+ 
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.flexslider {margin: 0px 0 0 -600px;width:1200px;position: absolute;left: 50%;top: 0;}
+.flexslider .slides{height:350px;}
+.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;position: relative;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider img{width:100%;}
+.flex-viewport {}
+.loading .flex-viewport {max-height: 300px;}
+.flexslider .slides {zoom: 1;}
+
+/* Direction Nav */
+.flex-direction-nav a {width: 49px; height: 49px; display: block;position: absolute; top: 206px; cursor: pointer; text-indent: -9999px;z-index:999;}
+
+.flex-direction-nav .flex-next {right:145px;background:url(../images/next.png) left top no-repeat;}
+.flex-direction-nav .flex-prev {left:145px;background:url(../images/prev.png) left top no-repeat;}
+
+.flex-direction-nav a:hover{background-position:0 -130px;}
+
+.flex-direction-nav .disabled {cursor: default;}
+
+/* Control Nav */
+.flex-control-nav { position: absolute; overflow: hidden; bottom: 16px; text-align: center;z-index:999;left:45%;}
+.flex-control-nav li {margin: 0 5px 0 0;float: left;}
+.flex-control-paging li a {width: 20px; height: 21px; display: block;background:url(../images/pags.png) 0 -21px no-repeat;cursor: pointer; text-indent: -9999px;}
+.flex-control-paging li a:hover, .flex-control-paging li a.flex-active{ background-position:0 0px;}
+
+.flex-control-thumbs { position: static; overflow: hidden;}
+.flex-control-thumbs li {width: 25%; float: left; margin: 0;}
+.flex-control-thumbs img {width: 100%; display: block; cursor: pointer;}
+.flex-control-thumbs img:hover {opacity: 1;}
+.flex-control-thumbs .active {opacity: 1; cursor: default;}
+
+.banner {color: #676868;font-family: Arial,Helvetica,sans-serif;font-size: 40px;font-weight: bold;left: 103px;line-height: 42px;overflow: hidden;padding: 0;letter-spacing:-1px;position: absolute;top: 99px;width: 414px;z-index: 15;}
+
+.position1 {
+	right:76px !important;
+	width:311px;
+	left:auto !important;
+}
+	.banner span {
+		font-size:45px;
+		line-height:54px;
+		display:block;
+	}
+	.banner strong {
+		display:block;
+		margin-top:-4px;
+	}
+	/*================================>> Respons <<========================================*/
+@media only screen and (max-width: 995px) {
+ body{min-width:768px;}
+ .flexslider .shadow{display:none;}
+ .flexslider{margin-top:30px;}
+ .flex-control-nav{bottom:35px;}
+ .flex-direction-nav a{top:120px;}
+ .flexslider .banner{top:70px;}
+ .position1{right:20px !important;}
+}
+
+@media only screen and (max-width: 767px) {
+ body{min-width:420px;}
+ .flexslider .banner{display:none;}
+ .flex-direction-nav a{top:60px;}
+ .flex-control-nav{bottom:150px;left:40%;}
+}
+
+@media only screen and (max-width: 479px) {
+ body{min-width:300px;}
+ .flex-direction-nav a{display:none;}
+ .flex-control-nav{bottom:205px;left:35%;}
+}

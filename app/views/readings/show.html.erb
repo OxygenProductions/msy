@@ -1,0 +1,11 @@
+<div class="reading-player">
+	<h2><%= @reading.title %></h2>
+	<%= raw @reading.content %>
+</div>
+
+<%= render 'readings/list' %>
+
+<% content_for :side do %>
+  <h2 class="ind2">Links</h2>
+	<%= render 'layouts/subnav' %> 
+<% end %>

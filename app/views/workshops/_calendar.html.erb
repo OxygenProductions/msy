@@ -1,0 +1,17 @@
+<div id="workshops">
+  <h2 id="month">
+    <%= link_to "<", date: @date.prev_month %>
+    <%= @date.strftime("%B %Y") %>
+    <%= link_to ">", date: @date.next_month %>
+  </h2>
+  <%= calendar @date do |date| %>
+    <%= date.day %>
+    <% if @workshops_by_date[date] %>
+      <ul>
+        <% @workshops_by_date[date].each do |workshop| %>
+          <li><%= link_to workshop.title, workshops_show_url(workshop) %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  <% end %>
+</div>

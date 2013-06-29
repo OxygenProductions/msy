@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130623001943) do
+ActiveRecord::Schema.define(:version => 20130629054914) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -46,6 +46,15 @@ ActiveRecord::Schema.define(:version => 20130623001943) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
+  create_table "audios", :force => true do |t|
+    t.string   "title"
+    t.string   "image"
+    t.string   "audio"
+    t.integer  "weight"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "authors", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -65,6 +74,22 @@ ActiveRecord::Schema.define(:version => 20130623001943) do
   end
 
   add_index "cards", ["author_id"], :name => "index_cards_on_author_id"
+
+  create_table "ckeditor_assets", :force => true do |t|
+    t.string   "data_file_name",                  :null => false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.integer  "assetable_id"
+    t.string   "assetable_type",    :limit => 30
+    t.string   "type",              :limit => 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+  end
+
+  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
+  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
 
   create_table "envelopes", :force => true do |t|
     t.string   "name"
@@ -111,6 +136,15 @@ ActiveRecord::Schema.define(:version => 20130623001943) do
 
   add_index "images", ["card_id"], :name => "index_images_on_card_id"
 
+  create_table "readings", :force => true do |t|
+    t.string   "title"
+    t.string   "image"
+    t.integer  "weight"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "roles", :force => true do |t|
     t.string   "name"
     t.integer  "resource_id"
@@ -121,6 +155,15 @@ ActiveRecord::Schema.define(:version => 20130623001943) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], :name => "index_roles_on_name"
+
+  create_table "slideshows", :force => true do |t|
+    t.string   "title"
+    t.string   "image"
+    t.text     "content"
+    t.integer  "weight"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"
@@ -137,6 +180,15 @@ ActiveRecord::Schema.define(:version => 20130623001943) do
 
   create_table "tags", :force => true do |t|
     t.string "name"
+  end
+
+  create_table "testimonials", :force => true do |t|
+    t.string   "title"
+    t.text     "summary"
+    t.text     "content"
+    t.integer  "weight"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -170,5 +222,24 @@ ActiveRecord::Schema.define(:version => 20130623001943) do
   end
 
   add_index "users_roles", ["user_id", "role_id"], :name => "index_users_roles_on_user_id_and_role_id"
+
+  create_table "videos", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "video"
+    t.string   "image"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "weight"
+  end
+
+  create_table "workshops", :force => true do |t|
+    t.string   "title"
+    t.text     "summary"
+    t.text     "content"
+    t.date     "date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end

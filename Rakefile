@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-JewishEcards::Application.load_tasks
+Msy::Application.load_tasks

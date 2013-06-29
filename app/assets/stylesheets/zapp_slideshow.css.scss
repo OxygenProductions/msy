@@ -1,0 +1,22 @@
+.slideshow-player {
+	margin-bottom: 50px;
+	background: #d3c8a2;
+	padding: 30px;
+	height: 700px;
+	.flexslider {
+		width: 800px;
+		left: 680px;
+		top: 90px;
+		> li {
+			width: 800px;
+		}
+	}
+	.flex-control-nav {
+		position: absolute;
+		overflow: hidden;
+		bottom: 53px;
+		text-align: center;
+		z-index: 999;
+		left: 35%;
+	}
+}

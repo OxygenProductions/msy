@@ -1,0 +1,32 @@
+<h1 class="ind3">Testimonials</h1>
+
+<div class="testimonials">
+	<% for testimonial in @testimonials %>
+	
+		<div class="testimonial">
+			<h2><%= testimonial.title %></h2>
+			<div class="w-summary">
+				<%= raw testimonial.summary %>
+				<% if testimonial.content != '' %>
+					<span class="more">See More...</span>
+				<% end %>
+			</div>
+			<% if testimonial.content != '' %>
+				<div class="w-content">
+					<%= raw testimonial.content %>
+					<span class="less">See Less</span>
+				</div>
+			<% end %>
+		</div>
+	
+	<% end %>
+</div>
+
+<% content_for :side do %>
+	<%= render 'layouts/side_ytt' %>
+	
+	
+	<div class="clear"></div>
+	<p>&nbsp;</p>	
+		
+<% end %>

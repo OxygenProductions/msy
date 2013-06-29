@@ -1,0 +1,265 @@
+@import "../css/reset.css";@import "../css/skeleton.css";@import"carousel.css";
+@import "../css/flexslider.css";@import "../css/superfish.css";
+article,aside,audio,canvas,command,datalist,details,embed,figcaption,figure,footer,header,hgroup,keygen,meter,nav,output,progress,section,source,video{display:block}mark,rp,rt,ruby,summary,time{display:inline}
+/* Global properties ======================================================== */
+html {width:100%}
+
+body {font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:18px; color:#969696; min-width:960px; background:#dbdfdb; -webkit-text-size-adjust: none;}
+
+/*********************************fonts*************************************/
+.reg {text-transform:uppercase}
+.f_left {float:left}
+.f_right {float:right}
+.align_right {text-align:right}
+.align_center {text-align:center}
+
+.it{font-style:italic}
+.let{letter-spacing:-1px}
+
+/*********************************CLASSES**********************************/
+.m_bottom_zero{ margin-bottom:0 !important;}
+.m_left_zero{ margin-left:0 !important;}
+.p_bottom_zero{ padding-bottom:0 !important;}
+.p_left_zero{ padding-left:0 !important;}
+
+.clear {clear:both;width:100%;line-height:0;font-size:0;}
+.wrapper {width:100%;overflow:hidden}
+.extra_wrapper{ overflow:hidden;}
+.container{width:100%}
+.extra_last, .last{ margin-bottom:0 !important; padding-bottom:0 !important;}
+.extra_last{ border:none !important; background:none !important;}
+.bg_none{ background:none !important;}
+
+/*==================================== Links ======================================================== */
+a {color:#969696;outline:none; text-decoration:none; cursor:pointer;}
+a:hover{ color:#404040; text-decoration:none;}
+
+.button, .button1{background: url("../images/bg_link.gif") 0 0 repeat-x #6c9d11;color: #FFFFFF;display: inline-block;font-size: 13px;line-height: 18px;padding: 7px 13px 8px;margin-top:21px;}
+.button:hover, .button1:hover{ background:#1e2021;color:#fff;}
+.button1{padding:7px 27px 8px;margin-top:15px;}
+/*********************************Displays*************************************/
+.block{ display:block;}
+.inline-block{ display:inline-block;}
+
+/*********************************header*************************************/
+
+header {}
+header h1{width:200px;float: left;margin: 0px 0 0 -20px;}
+header h1 a {display:block;width:200px;height:80px;background:url(../images/logo.png) 0 0px no-repeat; text-decoration:none; text-indent:-9999px;}
+
+/*********************************content*************************************/
+#content {padding:63px 0px 83px 0px;}
+.cont_pad{padding:54px 0 83px 0 !important;}
+
+/*========================>> Global Blocks <<============================*/
+.block1{position: relative;background:#d2d7d2;height: 81px;}
+.block2{position: relative;height:477px;background:#dbdfdb;overflow: hidden;clear: both;}
+.block3{position: relative;background:#f5f7f5;}
+.block4{position: relative;background: url("../images/bg_aside.gif") repeat scroll left top transparent;color: #7D7D7D;font-size: 14px;line-height: 18px;}
+
+/*================================>> Aside <<========================================*/
+aside{background: #d2d7d2;border-bottom: 1px solid #c8cec8;}
+aside h3 {color: #343434;font-size: 20px;font-weight: bold;line-height: 24px;margin-bottom: 32px;}
+aside h3.ind1{margin-bottom:29px;}
+aside .inner{padding: 43px 40px 50px 0;background: url("../images/tail1.gif") right 0 repeat-y;}
+aside .inner1{padding: 43px 0px 54px 0;background: url("../images/tail1.gif") 240px 0 repeat-y;}
+aside .inner2{padding: 43px 0px 51px 0;}
+aside ul a{color: #7D7D7D;font-size: 12px;line-height: 24px;text-decoration: underline;}
+
+#form1{overflow: hidden;padding: 4px 0 34px ;border-bottom: 1px solid #c8cec8;position: relative;}
+#form1 input{ background:#d2d7d2;border-color: #bcc2bc; border-style: solid;border-width: 1px;color: #6d6d6d;font-size: 12px;
+margin: 0 1px;outline:none; padding: 4px 10px 5px;vertical-align: middle;width: 158px;float: left;font-family:Arial, Helvetica, sans-serif;}
+#form1 a{background: url("../images/bg_link.gif") repeat scroll left top transparent;color: #FFFFFF;display: inline-block;float: left;font-size: 13px;height: 26px;line-height: 26px;padding: 0 15px;text-decoration: none !important;vertical-align: middle;}
+#form1 a:hover{background:#1e2021; text-decoration:none !important; color:#fff}
+#form1 .error{bottom: 0;}
+#form1 .error, #form1 .success{width: 100%;color: red;height: 0;overflow: hidden;display: block;position: absolute;}
+#form1 .success{height: 30px;padding: 10px 0;text-align: center;top: 0;background: #fff;}
+#form1 .error{font-size: 11px;}
+
+#form1 label.invalid .error{height: 20px;padding: 5px;}
+
+
+
+aside .social{ overflow:hidden;padding-top:27px;}
+.social a{ display:block; float:left;width:33px;height:33px; overflow:hidden; margin-right: 7px;}
+.social a.rss img{margin-top:1px;}
+.social a.rss:hover img{margin-top:-32px;}
+aside .social a:hover img{ margin-top:-33px;}
+/*===============================>> Paragraphs <<=============================*/
+
+p {margin-bottom:18px}
+.p2{ margin-bottom:11px;}
+.p3{ margin-bottom:33px;}
+/*================================>> LISTS <<========================================*/
+.list1{}
+.list1 li{background:url(../images/marker1.gif) 0 0 no-repeat; padding-left:26px; overflow:hidden; padding-bottom:16px; line-height:14px}
+.list1 a{color:#969696;text-decoration:underline;}
+.list1 a:hover{text-decoration:none;}
+
+
+/*================================>> H <<========================================*/
+h2,h3,h4{ font-weight:normal;}
+h2{font-size: 28px; line-height: 32px; color:#4a4a4a;letter-spacing:-1px;margin-bottom:26px;}
+
+h2.ind{ margin-bottom:36px;}
+h2.ind1{ margin-bottom:38px;}
+h2.ind2{ margin-bottom:37px;}
+h2.ind3{margin-bottom:33px;}
+h2.ind4{margin-bottom:32px;}
+h2.ind5{margin-bottom:27px;}
+h2.ind6{margin-bottom:31px;}
+
+/*================================>> hovers <<========================================*/
+
+/*********************************page_1*************************************/
+.ext_list>li, .ext_box{ overflow:hidden;}
+.ext_list>li>figure, .ext_box>figure{ float:left;}
+.ext_list>li>div, .ext_box>div{overflow:hidden;}
+
+.f_14{font-size: 14px;}
+
+.pad_box{padding: 0 45px 0 0;}
+
+.m_bot1{margin-bottom:66px;}
+.m_bot2{margin-bottom:63px;}
+.m_bot3{margin-bottom:53px;}
+
+.color1{color: #4a4a4a;}
+
+.about_list>li, .about_list{overflow:visible !important;}
+.about_list>li{border-bottom: 1px solid #e0e4e0;padding-bottom: 25px;margin-bottom:28px;}
+.about_list>li>div{overflow: hidden;}
+.about_list>li>figure{display:inline-block;float: left;margin: 0 16px 0 0;}
+h6{font-size:12px; font-style:italic; color:#4a4a4a; text-decoration:underline; margin-bottom:3px; background:url(../images/icon.gif) 0 2px no-repeat; padding:0px 0 2px 23px;font-weight:normal;}
+.about_list .button{margin: 9px 0 0;padding-left:26px;padding-right:26px;}
+
+.customers{padding: 14px 10px 0 0;}
+.link1{background: url("../images/marker.png") no-repeat;color: #4a4a4a;float: right;font-size: 13px;font-style: italic;padding: 3px 0 3px 35px;text-decoration: underline;}
+
+.link2{text-decoration:underline;color: #4a4a4a;}
+.link2:hover{text-decoration:none;}
+/*********************************page_2*************************************/
+.services_list>li{border-bottom: 1px solid #dadeda;padding-bottom: 15px;margin-bottom:20px;}
+.services_list>li>div{padding: 2px 0 0;}
+.services_list>li>figure{margin: 0 0 0 0;width:106px;}
+.services_list h6, h6.h6{background:none;padding:0;margin-bottom:13px;}
+
+.inique{margin-bottom:51px;}
+
+.planning{margin-bottom:63px;}
+.planning>div,.provide>div{overflow: hidden;}
+.planning>figure{display:inline-block;float: left;margin: 0 16px 0 0;}
+/*********************************page_3*************************************/
+.provide>figure{display:inline-block;float: left;margin: 1px 22px 0 0;}
+.provide{overflow: hidden;}
+/*********************************page_4*************************************/
+.resources{margin-bottom:50px;}
+
+.help{margin-bottom:12px;}
+.help>figure{margin: 0px 20px 0 0;}
+.help>div{padding-top: 10px;}
+
+.sup_service{}
+.sup_service>li{border-bottom: 1px solid #e1e5e1;padding-bottom: 17px;margin-bottom:23px;}
+.sup_service>li>div{padding-top:1px;overflow: hidden;}
+.sup_service>li>figure{margin: 0 21px 0 1px;float: left;}
+.sup_service .button1{margin-top:24px;}
+/*********************************page_5*************************************/
+
+
+/* Contact form */
+#contact-form {padding:2px 0 0 0;position: relative;}
+#contact-form .success {position: absolute;width: 100%;background: #fff;border: 1px solid #d9ded9;text-align: center;padding: 20px 0;z-index: 99;}
+#contact-form textarea, #contact-form input {margin:0;font-size:14px;border: 1px solid #d9ded9;color:#969696; padding:6px 14px;outline:none; position:relative; font-family:Arial, Helvetica, sans-serif;background:none;}
+#contact-form input {width:221px;}
+#contact-form textarea {overflow:auto; width:400px; height:145px;resize:none; float:left; margin: 0 0 0 0;}	
+#contact-form label {display:inline-block; min-height:41px; position: relative; overflow:hidden;}	
+#contact-form label.message { display:block; padding-bottom:0; }
+#contact-form .button1 {margin-left:20px;}	
+#contact-form .error, #contact-form .empty, #contact-form .success {display:none;}	
+#contact-form .error, #contact-form .empty {text-align:left; color:red; font-size:11px;position: absolute;right: 10px;top: 5px;}
+#contact-form .buttons2 {overflow:hidden;text-align:right; position:relative; clear:both; padding-top:20px;}
+#contact-form .buttons2 a {
+	cursor:pointer;
+	margin-top:0;
+	text-align:center;
+}
+#contact-form span{ display:block; margin: 0px 0 0 5px;}
+
+.map_wrapper{overflow:hidden;display:inline-block;margin-bottom:12px;}
+#map_canvas {
+   width:229px;
+   height:183px;
+}
+.adress{}
+.adress span{ display:inline-block; width:74px;}
+.adress dt{}
+
+.demo{color:#969696;}
+.demo:hover{ text-decoration:underline;}
+
+.c_name{text-decoration:underline;color: #4a4a4a;}
+/****************************footer************************/
+footer {color: #7D7D7D;padding:15px 0;}
+footer a{color: #7D7D7D;text-decoration: underline;}
+
+
+/*==================================RESPONSIVE LAYOUTS===============================================*/
+@media only screen and (max-width: 1024px) {
+  .flexslider{width: 1024px;height: 407px;position: relative;margin: 0 auto;left: 0;top: 0;}
+  .block2{height: 407px;}
+}
+@media only screen and (max-width: 995px) {
+ body{min-width:768px;}
+ .flexslider{width: 768px;height: 350px;}
+ .block2{height:305px;}
+ .flex-control-nav {bottom: 60px;}
+ #content{padding: 30px 0 30px;}
+ .cont_pad{padding:30px 0 40px !important;}
+ .m_bot1{margin-bottom:35px;}
+	#form1 a{padding: 0 10px;margin-top: 10px;}
+	#form1 input{width:145px;}
+	aside .inner, aside .inner1{background:none;}
+	#contact-form textarea, #contact-form input{width: 310px;}
+  #contact-form .success{width: 99%;}
+	.map_wrapper, #map_canvas {width:100%;}
+}
+
+@media only screen and (max-width: 767px) {
+ body{min-width:420px;}
+ .flexslider{width: 420px;height: 167px;}
+ nav, h1, .sf-menu>li{float: none !important;}
+ .block1{height:auto;padding-bottom:20px;}
+ .block2{height:167px;}
+aside .inner{background:none;padding-bottom:0px;padding-right: 0;}
+aside .inner2, aside .inner1{padding:10px 0;}
+#form1 a{margin-top:0px;}
+#form1 input{width: 317px;}
+.column_a{float: left !important;width:210px !important;}
+.provide>div{overflow: visible !important;}
+.m_bot2, .m_bot3{margin-bottom:30px;}
+.sup_service>li>div{overflow: visible;}
+#contact-form textarea, #contact-form input{width: 388px;}
+.buttons2{padding-right:4px;}
+.flex-direction-nav a{top: 70px;}
+.flex-direction-nav .flex-prev{left: 20px;}
+.flex-direction-nav .flex-next{right: 20px;}
+.flex-control-nav{bottom: 20px;}
+.pad_box{padding-right: 0;}
+header h1{margin-left: 0;}
+.column_a{width: 100% !important;float: none !important;}
+}
+
+@media only screen and (max-width: 479px) {
+ body{min-width:300px;}
+ .flexslider{width: 300px;height: 119px;}
+ .block2{height:119px;}
+ .services_list > li > div{overflow: visible;}
+ .sup_service>li>figure, .provide>figure{float: none;margin-bottom:20px;width:100%;}
+ .provide>figure img, .sup_service img{width:100%;}
+ #contact-form textarea, #contact-form input{width: 270px;}
+ .buttons2{padding-right:0px;}
+ #contact-form .success{width:299px;}
+ #form1 a{margin-top:10px;}
+ #form1 input{width: 270px;}
+}

@@ -12,5 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.datepicker
+//= require jquery.easing.1.3
+//= require jquery.elastislide
+//= require jquery.flexslider
+//= require jquery.mobilemenu
 //= require bootstrap
+//= require videojs
+//= require ckeditor/init
 //= require_tree .
+
+$(document).ready(function(){
+  $('input.ui-datepicker').datepicker();
+});

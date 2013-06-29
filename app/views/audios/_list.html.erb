@@ -1,0 +1,25 @@
+<h1 class="ind3">Audio</h1>
+
+<div id="tag_cloud">
+  <% tag_cloud Audio.audio_tag_counts, %w{s m l} do |tag, css_class| %>
+    <%= link_to tag.name, "/audio?tag=#{tag.name}", class: css_class %>
+  <% end %>
+  <%= link_to 'All Audio', audio_url, :class => 'all' %>
+</div>
+
+<div class="audios resource-list">
+	<% for audio in @audios %>
+		<div class="audio list-item">
+			<a href="/audio/<%= audio.id %>" title="<%= audio.title %>">
+				<div class="image">
+					<%= image_tag url_for_cdn(audio.image.url(:thumb)) %>
+				</div>
+				<div class="overlay"></div>
+				<div class="title">
+					<%= audio.title %>
+				</div>
+			</a>
+		</div>
+	<% end %>
+	<%= paginate @audios %>
+</div>

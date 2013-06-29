@@ -2,34 +2,62 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Jewish Ecards" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Jewish Ecards" %>">
+    <title><%= content_for?(:title) ? yield(:title) : "Mark Stephens Yoga" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Mark Stephens Yoga" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
-    <div class="navbar navbar-fixed-top">
-      <nav class="navbar-inner">
-        <div class="container">
-          <%= render 'layouts/navigation' %>
-        </div>
-      </nav>
+
+    <div class="block1">
+    <div class="container_24">
+      <!--==============================header=================================-->
+      <div class="grid_24">
+       <header>
+          <h1><a class="logo" href="/">Mark Stephens Yoga</a></h1>
+          <%= render 'layouts/menu' %>          
+        <div class="clear"></div>
+       </header>
+      </div>
+      <div class="clear"></div>
     </div>
-    <div id="main" role="main">
-      <div class="container">
-        <div class="content">
-           <div class="row">
-            <div class="span12">
-              <%= render 'layouts/messages' %>
-              <%= yield %>
-            </div>
+   </div>
+   <div class="block2">
+      <div class="flexslider">
+         <ul class="slides">
+          <li><img src="/images/slide-1.jpg" alt="" /></li>
+          <li><img src="/images/slide-2.jpg" alt="" /></li>
+          <li><img src="/images/slide-3.jpg" alt="" /></li>
+          <li><img src="/images/slide-2.jpg" alt="" /></li>
+         </ul>
+      </div>
+	 </div>
+   <!--==============================content================================-->
+   <div class="block3">
+      <section id="content">
+        <div class="container_24">
+          <div class="wrapper">
+
+            <%= render 'layouts/messages' %>
+
+            <article class="grid_14">
+                <%= yield %>
+            </article>
+            <article class="grid_8 prefix_2">
+              <%= yield :side %>
+            </article>
           </div>
-          <footer>
-          </footer>
         </div>
-      </div> <!--! end of .container -->
-    </div> <!--! end of #main -->
+      </section>
+   </div>
+   <footer>
+      <div class="container_24">
+<!--==============================footer=================================-->
+        <div class="grid_24">Garden &copy; 2013 &nbsp;| &nbsp;<a href="index-5.html">Privacy Policy</a></div>
+      </div>
+    </footer>
+
   </body>
 </html>

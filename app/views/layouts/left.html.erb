@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Mark Stephens Yoga" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Mark Stephens Yoga" %>">
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= yield(:head) %>
+  </head>
+  <body class="<%= controller_name %> <%= action_name %>">
+
+    <div class="block1">
+    <div class="container_24">
+      <!--==============================header=================================-->
+      <div class="grid_24">
+       <header>
+          <h1><a class="logo" href="/">Mark Stephens Yoga</a></h1>
+          <%= render 'layouts/menu' %>          
+        <div class="clear"></div>
+       </header>
+      </div>
+      <div class="clear"></div>
+    </div>
+   </div>
+   <%= yield :top %>
+   <!--==============================content================================-->
+   <div class="block3">
+      <section id="content">
+        <div class="container_24">
+          <div class="wrapper">
+
+            <%= render 'layouts/messages' %>
+
+            <article class="grid_8 prefix_2">
+              <%= yield :side %>
+            </article>
+            
+            <article class="grid_14">
+                <%= yield %>
+            </article>
+            
+          </div>
+        </div>
+      </section>
+   </div>
+   <footer>
+      <div class="container_24">
+<!--==============================footer=================================-->
+        <div class="grid_24">Garden &copy; 2013 &nbsp;| &nbsp;<a href="index-5.html">Privacy Policy</a></div>
+      </div>
+    </footer>
+
+  </body>
+</html>

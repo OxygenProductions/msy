@@ -1,0 +1,11 @@
+<div class="slideshow-player">
+	<h2><%= @slideshow.title %></h2>
+	<%= raw @slideshow.content %>
+</div>
+
+<%= render 'slideshows/list' %>
+
+<% content_for :side do %>
+  <h2 class="ind2">Links</h2>
+	<%= render 'layouts/subnav' %> 
+<% end %>
