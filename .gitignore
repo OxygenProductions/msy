@@ -15,7 +15,7 @@
 /vendor/bundle/
 /vendor/ruby/
 
-/public/upload/tmp*
+/public/uploads/tmp*
 
 # minimal Rails specific artifacts
 db/*.sqlite3
