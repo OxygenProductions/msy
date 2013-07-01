@@ -37,7 +37,6 @@ Msy::Application.routes.draw do
   get "apply",		to: "applies#new"
   post "apply",		to: "applies#create", :as => :applies
   
-<<<<<<< HEAD
   get "poetry-and-prose", to: "pages#poetry", :as => :poetry
   
   get "books", to: "pages#books", :as => :books
@@ -53,8 +52,6 @@ Msy::Application.routes.draw do
   get "scholarships", to: "pages#scholarships"
   get "newsletters", to: "pages#newsletters"
   
-=======
->>>>>>> a9de3ff4fe6633590b90c8b0158dcc2f91cb21ac
 
   get "yoga-teacher-training", to: "pages#ytt", :as => :ytt
 	  get "200-hour", to: "pages#ytt200", :as => :ytt200
