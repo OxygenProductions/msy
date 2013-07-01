@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20130630211357) do
+=======
+ActiveRecord::Schema.define(:version => 20130629054914) do
+>>>>>>> a9de3ff4fe6633590b90c8b0158dcc2f91cb21ac
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -53,8 +57,11 @@ ActiveRecord::Schema.define(:version => 20130630211357) do
     t.integer  "weight"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+<<<<<<< HEAD
     t.string   "image_tmp"
     t.string   "audio_tmp"
+=======
+>>>>>>> a9de3ff4fe6633590b90c8b0158dcc2f91cb21ac
   end
 
   create_table "authors", :force => true do |t|
@@ -138,6 +145,7 @@ ActiveRecord::Schema.define(:version => 20130630211357) do
 
   add_index "images", ["card_id"], :name => "index_images_on_card_id"
 
+<<<<<<< HEAD
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "summary"
@@ -148,6 +156,8 @@ ActiveRecord::Schema.define(:version => 20130630211357) do
     t.datetime "updated_at", :null => false
   end
 
+=======
+>>>>>>> a9de3ff4fe6633590b90c8b0158dcc2f91cb21ac
   create_table "readings", :force => true do |t|
     t.string   "title"
     t.string   "image"
@@ -175,7 +185,10 @@ ActiveRecord::Schema.define(:version => 20130630211357) do
     t.integer  "weight"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+<<<<<<< HEAD
     t.string   "image_tmp"
+=======
+>>>>>>> a9de3ff4fe6633590b90c8b0158dcc2f91cb21ac
   end
 
   create_table "taggings", :force => true do |t|
@@ -244,7 +257,10 @@ ActiveRecord::Schema.define(:version => 20130630211357) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "weight"
+<<<<<<< HEAD
     t.string   "image_tmp"
+=======
+>>>>>>> a9de3ff4fe6633590b90c8b0158dcc2f91cb21ac
   end
 
   create_table "workshops", :force => true do |t|
