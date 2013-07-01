@@ -33,11 +33,11 @@
 
             <%= render 'layouts/messages' %>
 
-            <article class="grid_8 prefix_2">
+            <article class="grid_6">
               <%= yield :side %>
             </article>
             
-            <article class="grid_14">
+            <article class="grid_16 prefix_2">
                 <%= yield %>
             </article>
             
@@ -45,12 +45,7 @@
         </div>
       </section>
    </div>
-   <footer>
-      <div class="container_24">
-<!--==============================footer=================================-->
-        <div class="grid_24">Garden &copy; 2013 &nbsp;| &nbsp;<a href="index-5.html">Privacy Policy</a></div>
-      </div>
-    </footer>
+   <%= render 'layouts/footer' %>
 
   </body>
 </html>

@@ -3,6 +3,9 @@
 <p>The 200-Hour Yoga Teacher Training and Certification Program is completed in two phases of 100 hours. Here are the details:</p>
 
 <h2>Phase I: 100-Hour Foundational Course</h2>
+
+<p><%= image_tag(url_cdn("images/ytt10.jpg")) %></p>
+
 <p>The initial 7-week, 100-hour Foundational Teacher Training Course begins with the question, “What is yoga?”  We then explore the fundamental elements of asana (postures), pranayama (breathing), and meditation as the interwoven threads of a holistic and integrated practice.</p>
 
 <p>Specific topics and activities in the 100-Hour Foundational Yoga Teacher Training Course include:</p>
@@ -118,4 +121,8 @@ Class Observation: Buy observing experienced teachers in the act of leading live
 </p>
 <div class="clear"></div>
 
+<% end %>
+
+<% content_for :top do %>
+	<%= render 'pages/top_ytt' %>
 <% end %>

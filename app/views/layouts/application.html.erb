@@ -24,16 +24,7 @@
       <div class="clear"></div>
     </div>
    </div>
-   <div class="block2">
-      <div class="flexslider">
-         <ul class="slides">
-          <li><img src="/images/slide-1.jpg" alt="" /></li>
-          <li><img src="/images/slide-2.jpg" alt="" /></li>
-          <li><img src="/images/slide-3.jpg" alt="" /></li>
-          <li><img src="/images/slide-2.jpg" alt="" /></li>
-         </ul>
-      </div>
-	 </div>
+   <%= yield :top %>
    <!--==============================content================================-->
    <div class="block3">
       <section id="content">
@@ -52,12 +43,7 @@
         </div>
       </section>
    </div>
-   <footer>
-      <div class="container_24">
-<!--==============================footer=================================-->
-        <div class="grid_24">Garden &copy; 2013 &nbsp;| &nbsp;<a href="index-5.html">Privacy Policy</a></div>
-      </div>
-    </footer>
+   <%= render 'layouts/footer' %>
 
   </body>
 </html>

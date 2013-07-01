@@ -1,0 +1,38 @@
+.block4 {
+	aside {
+		background: #dfd4aa;
+		border-bottom: medium none;
+		.inner, .inner1, #form1 {
+			background: transparent;
+			color: #444;
+			border-bottom: medium none;
+			a {
+				color: #78170a;
+				&:hover {
+					color:#000;
+				}
+			}
+		}
+	}
+	a {
+		color: #78170a;
+		&:hover {
+			color:#000;
+		}
+	}
+}
+
+body footer {
+	color: #222;
+	background: #e4dfcd;
+	padding: 15px 0;
+}
+
+.link1 {
+	background: transparent;
+}
+
+#form1 .link5 {
+	padding: 0;
+	margin: 0;
+}

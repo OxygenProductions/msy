@@ -1,30 +1,122 @@
-<div id="welcome" class="hero-unit span7">
-  <h1>Membership Site</h1>
-  <h3>Learn to build a successful subscription site.</h3>
-</div>
-<div class="row span8 plans">
-  <div class="span2 well">
-    <div class="plan"><h2>Silver</h2></div>
-    <ul class="unstyled">
-      <li>One lesson a month</li>
-    </ul>
-    <h3>$9/month</h3>
-    <%= link_to 'Subscribe', new_user_registration_path(:plan => 'silver'), :class => 'btn btn-primary' %>
-  </div>
-  <div class="span2 well featured">
-    <div class="plan featured-plan"><h2>Gold</h2></div>
-    <ul class="unstyled">
-      <li>Ten lessons a month</li>
-    </ul>
-    <h3>$19/month</h3>
-    <%= link_to 'Subscribe', new_user_registration_path(:plan => 'gold'), :class => 'btn btn-primary' %>
-  </div>
-  <div class="span2 well">
-    <div class="plan"><h2>Platinum</h2></div>
-    <ul class="unstyled">
-      <li>Thirty lessons a month</li>
-    </ul>
-    <h3>$29/month</h3>
-    <%= link_to 'Subscribe', new_user_registration_path(:plan => 'platinum'), :class => 'btn btn-primary' %>
-  </div>
-</div>
+<h1>Welcome</h1>
+
+<p>This website is all about teaching yoga, yoga teacher training, and sharing yoga practices with students in meaningful ways. With extensive information on yoga teacher training, yoga classes, continuing education workshops, and yoga retreats plus a variety of free instructional resources - an asana video library, asana slideshows, guided classes, talks on teaching and practicing yoga, inspiring poetry and more - I hope you will explore and tap in to further guide and inspire your approachg to yoga.</p>
+
+<p>My approach to yoga starts with the idea that best yoga teacher one will ever have is alive and well inside, and that much of the yoga practice is about coming to clearly hear and honor our inner teacher. All of my classes, workshops and yoga teacher trainings tap into the deep wisdom of ancient yoga traditions while weaving in modern insights into the practice, an eclectic approach designed to prepare yoga teachers for a lifetime of sharing sustainable and transformational yoga experiences.</p>
+
+<p>If you are near Santa Cruz, California, please also visit the Santa Cruz Yoga website for the complete schedule of classes there. It is my home base for offering yoga teacher training in California.</p>
+
+<p>Enjoy exploring. Namaste!</p>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<hr>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<iframe src="http://player.vimeo.com/video/35042511?title=0&amp;byline=0&amp;portrait=0" width="600" height="350" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<hr>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<h1>New Bestseller for Yoga Teachers!</h1>
+
+<h2>Yoga Sequencing: Designing Transformative Yoga Classes</h2>
+
+<p style="text-align:center;"><%= link_to image_tag(url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/yoga_sequencing_cover.jpg")), yogaseq_url, :title => 'Yoga Sequencing' %></p>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<p>North Atlantic Books, 2012. 528 pages, 2,000 photographs.</p>
+<p>This book covers the essential principles and methods for planning and sequencing yoga classes. It empowers yoga teachers to be their creative best in designing yoga classes for all student levels. An excellent resource in yoga teacher training and teacher certification programs.</p>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<hr>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<h2>Yoga Sequencing - A Vital Resources for Yoga Teachers, Teacher Trainings, and Yoga Trainers</h2>
+
+
+<p>
+<%= image_tag(url_cdn("images/stephen_cope.jpg")) %><br><br>
+"A rich resource... Outstanding...Accessible for all." <br>
+<strong>–Stephen Cope</strong>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<p>
+<%= image_tag(url_cdn("images/shiva_rea.jpg")) %><br><br>
+"A great service to the yoga community..." <br>
+<strong>–Shiva Rea</strong></p>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<p>
+<%= image_tag(url_cdn("images/leslie_kaminoff.jpeg")) %><br><br>
+"Comprehensive...Essential reading...An instant classic."<br>
+<strong>–Leslie Kaminoff</strong></p>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<p>
+<%= image_tag(url_cdn("images/ganga_white.jpeg")) %><br><br>
+"An enormous contribution to the field of yoga teaching."<br>
+<strong>–Ganga White</strong></p>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<p>
+<%= image_tag(url_cdn("images/sally_kempton.jpg")) %><br><br>
+"A wise, practical guide...Should be in every yoga maven's library."<br>
+<strong>–Sally Kempton</strong></p>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<p>
+<%= image_tag(url_cdn("images/erich_shiffmann.jpg")) %><br><br>
+"Yoga Sequencing is going to be very helpful to a lot of people, both teachers and students alike."<br>
+<strong>–Erich Schiffmann</strong></p>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<p>
+<%= image_tag(url_cdn("images/james_bailey.png")) %><br><br>
+"A contemporary yoga classic...should be required reading in all yoga teacher training schools."<br>
+<strong>–James Bailey</strong></p>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<p>
+<%= image_tag(url_cdn("images/joel_ab.jpg")) %><br><br>
+"Empowers yoga teachers to be their best."<br>
+<strong>–Joel Kramer</strong></p>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<% content_for :side do %>
+	<%= render 'home/side' %> 
+<% end %>
+
+<% content_for :top do %>
+	<%= render 'home/top' %> 
+<% end %>

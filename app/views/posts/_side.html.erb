@@ -1,0 +1,21 @@
+<h2>Contact Mark</h2>
+
+<p>
+<strong>Email:</strong> mark@markstephensyoga.com<br>
+<strong>Tel:</strong> 831.331.3955<br>
+<strong>Mailing:</strong> Mark Stephens,<br>
+c/o Santa Cruz Yoga, 402 Ingalls St., #11<br>
+Santa Cruz, CA 95060
+</p>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<h2>Recent Posts</h2>
+
+<ul class="list1">
+<% for post in Post.limit(5).order("date DESC") do %>
+	<li><%= link_to post.title, blog_show_url(post.permalink) %></li>
+
+<% end %>
+</ul>

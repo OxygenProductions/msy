@@ -74,6 +74,10 @@
 	padding: 20px;
 	a {
 		color: #866d10;
+		margin-right: 20px;
+		&:hover {
+			color: #000;
+		}
 	}
 	.all {
 		display: block;

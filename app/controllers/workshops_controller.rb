@@ -16,7 +16,7 @@ class WorkshopsController < ApplicationController
 	end
 	
 	def topics
-		render layout: 'full'
+		#render layout: 'full'
 	end
 	
 	def book

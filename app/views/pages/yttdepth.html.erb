@@ -1,5 +1,7 @@
 <h1>In-Depth Yoga Studies & Teacher Training Program</h1>
 
+<p><%= image_tag(url_cdn("images/ytt8.jpg")) %></p>
+
 <p>Just as an artist shares his or her art, so a yogi or yogini shares their practice through the art of teaching. Whether your intention is to teach or to deepen your personal practice, this program will help you create the palette and tools to creatively express your yoga with intelligence, compassion and joy.</p>
 	
 <div class="clear"></div>
@@ -23,4 +25,8 @@ July 13 – August 25, 2013</h2>
 	<p>Please complete the teacher training application and check the box for  In-Depth Yoga Studies.</p>
 	<p><strong><i>Course Fee: $1,225 (84 hours)</i></strong></p>
 
+<% end %>
+
+<% content_for :top do %>
+	<%= render 'pages/top_depth' %>
 <% end %>

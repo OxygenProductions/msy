@@ -1,6 +1,56 @@
-<%= render 'readings/list' %>
+<h1>Written Word...</h1>
 
-<% content_for :side do %>
-  <h2 class="ind2">Links</h2>
-	<%= render 'layouts/subnav' %> 
+<strong><i>Books & Excerpts links to published books, Articles & Reflections to published articles and informal writings, and Poetry and Prose to just that, some mine and many from those who've inspired me. Enjoy reading!</i></strong>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<h2><a href="/books">Books and Excerpts</a></h2>
+
+<div class="container_24">
+
+	<div class="grid_8">
+		<%= link_to image_tag(url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/teaching_yoga_cover.jpg")), teachingyoga_url, :title => 'Teaching Yoga' %>
+	</div>
+	
+	<div class="grid_8">
+		<%= link_to image_tag(url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/yoga_sequencing_cover.jpg")), yogaseq_url, :title => 'Yoga Sequencing' %>
+	</div>
+	
+	<div class="grid_8">
+		<%= link_to image_tag(url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/yoga_adjustments_cover.jpg")), yogaadj_url, :title => 'Yoga Adjustments' %>
+	</div>
+	
+</div>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<div class="container_24">
+
+	<div class="grid_10">
+	
+		<h2><a href="/blog">Articles & Reflections</a></h2>
+		
+		<div class="grid_8">
+				<%= link_to image_tag(url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/yoga_woman.jpg")), '/blog', :title => 'Articles & Reflections' %>
+			</div>
+			
+	</div>
+	
+	
+	<div class="grid_10 prefix_4">
+	
+		<h2><%= link_to 'Poetry and Prose', poetry_url %></h2>
+	
+		<div class="grid_8">
+			<%= link_to image_tag(url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/lotus.jpg"), :style => 'width:100%;'), poetry_url, :title => 'Poetry and Prose' %>
+		</div>
+		
+	</div>	
+
+</div>
+
+<% content_for :top do %>
+	<%= render 'pages/top_resources' %> 
 <% end %>

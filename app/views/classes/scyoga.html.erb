@@ -79,8 +79,32 @@
 <li>Wineries on the West Side, on Ingalls between Swift Street and Fair Avenue.  A selection of tasting rooms with a variety of local wines offerings.  [0-0.25 miles]</li>
 </ul>
 
+<div class="clear"></div>
 <p>&nbsp;</p>
 
 <%= render 'classes/schedule' %>
 
+<div class="clear"></div>
+<p>&nbsp;</p>
+
 <%= render 'classes/buypasses' %>
+
+<% content_for :top do %>
+	<%= render 'classes/top' %>
+<% end %>
+
+<%= content_for :side do %>
+	<%= render 'classes/side' %>
+	
+	<div class="clear"></div>
+	<p>&nbsp;</p>
+	
+	<p><%= image_tag(url_cdn("images/class11.JPG")) %></p>
+
+	<p><%= image_tag(url_cdn("images/class12.jpg")) %></p>
+	
+	<p><%= image_tag(url_cdn("images/class13.jpg")) %></p>
+	
+	<p><%= image_tag(url_cdn("images/class14.jpg")) %></p>
+
+<% end %>

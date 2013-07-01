@@ -1,5 +1,7 @@
 <h1>Classes & Teaching Approach</h1>
 
+<p><%= image_tag(url_cdn("images/class5.jpg")) %></p>
+
 <p>My classes are offered for all levels of students and teachers. Each class provides a complete practice while offering different poses and themes from class-to-class. The sequence and relative difficulty of poses, the pace, use of breath, the challenges to strength, flexibility and balance vary depending upon class level. In all classes I provide extensive guidance on breath, alignment, energetic actions in poses, modifications, variations and use of props. This guidance is interwoven with lighthearted thoughts on spiritual philosophy and the process of living a more conscious life. While providing general instructions to the class as a whole, I move throughout the room to give each student individualized guidance in developing her or his personal practice.</p>
 
 <p>Rather than trying to tie yourself into knots, yoga is a practice of unwinding and finding freedom in your true nature. In my Vinyasa Flow Yoga, we honor the body’s inherent dynamism by moving fluidly from pose to pose in synchronized rhythm with the breath. On a superficial level this involves what might be described as an “athletic, cardio-vascular” effort.</p>
@@ -8,6 +10,16 @@
 
 <p>Come explore breathing your way into feeling more fully awake, balanced and alive!</p>
 
+<div class="clear"></div>
+<p>&nbsp;</p>
+
 <%= render 'classes/schedule' %>
 
+<div class="clear"></div>
+<p>&nbsp;</p>
+
 <%= render 'classes/buypasses' %>
+
+<% content_for :top do %>
+	<%= render 'classes/top' %>
+<% end %>

@@ -1,0 +1,18 @@
+<h1><%= link_to 'Blog: On Practice & Teaching', blog_url %></h1>
+
+<%= render 'posts/head' %>
+
+<% for post in @post %>
+	<div class="post list-item">
+		<div class="title">
+			<h2><%= post.title %></h2>
+		</div>
+		<div class="summary">
+			<%= raw post.content %>
+		</div>
+	</div>
+<% end %>
+
+<% content_for :top do %>
+	<%= render 'posts/top' %>
+<% end %>

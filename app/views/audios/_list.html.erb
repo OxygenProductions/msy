@@ -7,12 +7,18 @@
   <%= link_to 'All Audio', audio_url, :class => 'all' %>
 </div>
 
+<div class="other">
+	<a href="http://html5-player.libsyn.com/embed/episode/id/2302624/height/325/width/325/theme/legacy/direction/no/autoplay/no/autonext/no/thumbnail/yes/preload/no/no_addthis/no/#.Uc_gNj6gVHp" target="_blank">Inquire within podcast</a>
+</div>
+
 <div class="audios resource-list">
 	<% for audio in @audios %>
 		<div class="audio list-item">
 			<a href="/audio/<%= audio.id %>" title="<%= audio.title %>">
 				<div class="image">
-					<%= image_tag url_for_cdn(audio.image.url(:thumb)) %>
+					<% if audio.image.url(:thumb) %>
+						<%= image_tag url_for_cdn(audio.image.url(:thumb)) %>
+					<% end %>
 				</div>
 				<div class="overlay"></div>
 				<div class="title">
@@ -21,5 +27,4 @@
 			</a>
 		</div>
 	<% end %>
-	<%= paginate @audios %>
 </div>

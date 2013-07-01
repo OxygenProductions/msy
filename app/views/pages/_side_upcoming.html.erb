@@ -1,0 +1,8 @@
+<h2>Upcoming Workshops</h2>
+
+<ul class="list1">
+<% for event in Workshop.limit(5).order("date DESC") do %>
+	<li><%= link_to event.title, workshops_show_url(event) %><br><%= event.date %></li>
+
+<% end %>
+</ul>

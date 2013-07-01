@@ -1,5 +1,10 @@
 <h1 class="ind3">Yoga Teacher Training</h1>
 
+<p><%= image_tag(url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/teaching_yoga_cover.jpg")) %></p>
+
+<p>&nbsp;</p>
+<div class="clear"></div>
+
 <p>The Yoga Teacher Training & Certification Program is based in Santa Cruz, California. It provides a solid foundation in the art and science of teaching yoga, leading to 200-hour Yoga Teacher Certification and 500-hour Advanced Yoga Teacher Certification and registration with Yoga Alliance as a Registered Yoga Teacher (RYT 200 and RYT 500). Over 1,100 teachers have participated in this transformational program yoga teacher certification program since 1998, gaining the knowledge and skills for a lifetime of teaching excellence based on refined practice and comprehensive training in all of the elements of teaching yoga.</p>
 
 <p>Click on the 200 and 500-hour programs for curriculum details (in the sidebar to the right).</p>
@@ -28,6 +33,8 @@
 
 <h2 class="ind3">Personal Growth & Teaching Yoga</h2>
 
+<p><%= image_tag(url_cdn("images/ytt8.jpg")) %></p>
+
 <p>Yoga is a process for learning about ourselves and opening to our fullest potential. It helps us to expand our awareness and transform our lives in ways that make us happier, healthier and feeling more whole within ourselves and in our relationships with others in the world. Embracing these basic values is the starting point for becoming a good yoga teacher.</p>
 
 <p>Participants in this program invariably experience a deep and lasting sense of personal transformation as all of the elements of yoga become clearer and better integrated as you explore every aspect of yoga in your personal practice. In contrast to teacher training programs that emphasize attainment, competition or mastery, in this program we look to explore, refine, deepen, expand and learn without end. The primary source of this transformative learning is one's personal practice, and it is in the practice of yoga that we gain the most insight into how best to share the practice with others. Because yoga is a process for self-transformation, there is nothing to master, no end to what we can learn and no limit to how much we can grow and share.</p>
@@ -37,6 +44,8 @@
 
 <h2 class="ind3">Developing Best Practices</h2>
 
+<p><%= image_tag(url_cdn("images/ytt9.jpg")) %></p>
+
 <p>While yoga practice is the key to developing as a teacher, the Yoga Teacher Training & Certification Program methodically prepares you to teach with creativity, confidence, and competence. Rather than focusing narrowly on a single style or lineage, it is designed to give you the skills and knowledge to continuously evolve as a teacher based on your own evolution, interests, and intentions.</p>
 
 <p>In contrast to quick immersion trainings and “mastery” programs, this program is designed to ensure that you develop and integrate a comprehensive foundation and set of skills into the fabric of your life so that you flourish as an informed practitioner and creative teacher of yoga for the rest of your life. This takes time, effort and commitment. Starting from wherever you are in your knowledge, skills and experience, this program will give you the opportunity to progressively develop into the best yoga teacher you can be.</p>
@@ -45,30 +54,62 @@
 
 <p>What color is your yoga parachute?! Come explore.</p>
 
+<h2 style="text-align:center;"><%= link_to 'Call or email today with any questions!', contacts_url %></h2>
+
 <p>&nbsp;</p>
 <div class="clear"></div>
 
 <% content_for :side do %>
 	<%= render 'layouts/side_ytt' %>
 	
+	<div class="clear"></div>
+	<p>&nbsp;</p>
+	
+	<h2>Upcoming Teacher Trainings</h2>
+
+	<p><strong>Summer 2013: Santa Cruz, California</strong></p>
+
+	<p>7 consecutive weekends starting July 13th<br>
+12:30-6:30 Saturdays & Sunday<br>
+Winter 2014: Santa Cruz, California</p>
+
+	<p><strong>7 consecutive weekends starting Jan. 11th</strong></p>
+	
+	<p>12:30-6:30 Saturdays & Sundays<br>
+		<%= link_to 'Apply today to train to teach yoga!', registration_url, class: 'button1' %></p>
 	
 	<div class="clear"></div>
 	<p>&nbsp;</p>
 	
-	<h2>200-Hour Yoga Teacher Certification Program</h2>
-	<p>The 200-hour Yoga Teacher Training is fulfilled by completing the Phase I Foundational Teacher Training Course (100 hours), Phase II Yoga TEaxcher Certification Completion Component (100 hours), and passing the 200-Hour Yoga Teacher Certification Exam. The tuition fee is $2,500. Payment plan and early bird discounts available.</p>
+	<%= render 'pages/side_ytt200' %>
 	
 	<div class="clear"></div>
 	<p>&nbsp;</p>
 	
-	<h2>500-Hour Advanced Yoga Teacher Certification</h2>
-	<p>Fulfilled by completing the 200-Hour Yoga Teacher Certification plus 300 hours of advanced yoga studies. Two years of yoga teaching experience required for admission. The tuition fee is $2,500. Payment plan and early bird discounts available.</p>
+	<%= render 'pages/side_ytt500' %>
+
 	
 	<div class="clear"></div>
 	<p>&nbsp;</p>
 	
-	<h2>In-Depth Studies Program 100–Hour Intensive</h2>
-	<p>For serious students interested in deepening their practice and learning more about yoga. If this turns you onto teaching, you can transition directly into Phase II of the 200-hour program. The tuition fee is $1,500. Payment plan and early bird discounts available.</p>
+	<%= render 'pages/side_yttdepth' %>
 	
+	<div class="clear"></div>
+	<p>&nbsp;</p>
 	
+	<h2>Scholarships</h2>
+	
+	<ul class="list1">
+		<li>Joel Kramer & Diana Alstad Passionate Mind Scholarship<br>$2,500 Tuition Waiver</li>
+		<li>Yoga Inside Scholarship<br>$1,500 Tuition Waiver</li>
+		<li>Vanda Scarvali Memorial Scholarship<br>$500 Tuition Assistance</li>
+		<li>Royal Sarah Stephens Memorial Scholarship<br>$500 Tuition Assistance</li>
+	</ul>
+	<%= link_to 'Learn More', scholarships_url, class: 'button1' %></p>
+
+	
+<% end %>
+
+<% content_for :top do %>
+	<%= render 'pages/top_ytt' %>
 <% end %>

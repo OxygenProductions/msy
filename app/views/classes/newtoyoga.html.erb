@@ -1,5 +1,7 @@
 <h1>New to Yoga</h1>
 
+<p><%= image_tag(url_cdn("images/class6.jpg")) %></p>
+
 <p>Welcome! Whatever your age, condition or background, there is a yoga practice for you. So long as you tune in inside and pay attention to how you are feeling while doing yoga, this practice will give you tremendous health benefits, including a more positive outlook on life and a growing sense of ease in your daily life.</p>
 
 <p>Each of my classes offers a complete practice. You can drop in to any class. Try to arrive at least five minutes early to sign-in and get settled. If it is your first time to my class, please try to arrive a little earlier so we can meet before class starts. Please inform me of any injuries or special conditions (pregnancy, illness, traumas, etc.). If you arrive late or must leave early, please do so as quietly as you can. </p>
@@ -20,4 +22,15 @@
 
 <%= render 'classes/schedule' %>
 
+<div class="clear"></div>
+<p>&nbsp;</p>
+
 <%= render 'classes/buypasses' %>
+
+<% content_for :top do %>
+	<%= render 'classes/top' %>
+<% end %>
+
+<%= content_for :side do %>
+	<%= render 'classes/side' %>
+<% end %>

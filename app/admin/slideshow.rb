@@ -13,7 +13,7 @@ ActiveAdmin.register Slideshow do
     f.inputs "Slideshow Details" do       
       f.input :title
       f.input :slideshow_tag_list
-      f.input :content, :as => :ckeditor
+      f.input :content, :as => :text
       f.input :image, :hint => f.template.image_tag(f.object.image.url(:thumb))
       f.input :image_url, :input_html => { :disabled => true }
       f.input :weight

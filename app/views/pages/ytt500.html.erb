@@ -6,6 +6,8 @@
 
 <h2>Prerequisites</h2>
 
+<p><%= image_tag(url_cdn("images/ytt11.jpg")) %></p>
+
 <ul class="list1">
 <li>200-Hour yoga teacher certification from a credible source.</li>
 <li>Minimum of two years of teaching experience.</li>
@@ -131,4 +133,8 @@
 	<div class="clear"></div>
 	<p>&nbsp;</p>
 
+<% end %>
+
+<% content_for :top do %>
+	<%= render 'pages/top_ytt' %>
 <% end %>

@@ -37,6 +37,21 @@ Msy::Application.routes.draw do
   get "apply",		to: "applies#new"
   post "apply",		to: "applies#create", :as => :applies
   
+  get "poetry-and-prose", to: "pages#poetry", :as => :poetry
+  
+  get "books", to: "pages#books", :as => :books
+  get "teaching-yoga", to: "pages#teachingyoga", :as => :teachingyoga
+  get "yoga-sequencing", to: "pages#yogaseq", :as => :yogaseq
+  get "yoga-adjustments", to: "pages#yogaadj", :as => :yogaadj
+  
+  get "blog", to: "posts#index", :as => :blog
+  get "blog/:permalink", to: "posts#show", :as => :blog_show
+  
+  get "about", to: "pages#about"
+  get "gratitude", to: "pages#gratitude"
+  get "scholarships", to: "pages#scholarships"
+  get "newsletters", to: "pages#newsletters"
+  
 
   get "yoga-teacher-training", to: "pages#ytt", :as => :ytt
 	  get "200-hour", to: "pages#ytt200", :as => :ytt200

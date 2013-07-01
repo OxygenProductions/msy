@@ -1,0 +1,78 @@
+<h1>Books for Yoga Teachers</h1>
+
+<strong><i>In the past few years I've written three books. Teaching Yoga (2010) came about through years of training teachers, espcially though Yoga Inside Foundation but also in traditional yoga studio settings. Yoga Sequencing (2012) arose from years of teaching "The Art and Science of Sequecning" workshop, with hundreds of participants sharing their insights and wisdom. I had planed to complete a book on food and another on haiku when I was inspired by WIlliam J. Broad's "yoga can wreck your body" articles to write a very detailed book on guiding the practice - Yoga Adjustments (2014). </i></strong>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<h2><%= link_to 'Teaching Yoga', teachingyoga_url, :title => 'Teaching Yoga' %></h2>
+
+<div class="container_24">
+
+	<div class="grid_8">
+		<%= link_to image_tag(url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/teaching_yoga_cover.jpg")), teachingyoga_url, :title => 'Teaching Yoga' %>
+	</div>
+	
+	<div class="grid_16">
+		<p><strong><i>Teaching Yoga</i></strong> gives a broad overview of yoga philosophy, history, subtle energy, body structure and movement before going in-depth on the practical methods and techniques for teaching highly effective classes to a diverse array of students. This highly accessible book is written to serve a diverse range of yoga teachers rather than those teaching within one style, brand or lineage. Its eclectic perspective encourages teachers to be their creative best while clear in understanding the foundational of the art and science of teaching yoga. </p>
+		<i>North Atlantic Books, 2010.</i>
+	</div>
+
+</div>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<h2><%= link_to 'Yoga Sequencing', yogaseq_url, :title => 'Yoga Sequencing' %></h2>
+
+<div class="container_24">
+
+	<div class="grid_8">
+		<%= link_to image_tag(url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/yoga_sequencing_cover.jpg")), yogaseq_url, :title => 'Yoga Sequencing' %>
+	</div>
+	
+	<div class="grid_16">
+		<p><strong><i>Yoga Sequencing</i></strong> asks and attempts to answer one queston about yoga: why this, then that? Put differently, what is the best way to order the elements of a yoga practice? How are postures best placed in sensible sequences - sequences that make sense in a safe and sustainable yoga practice?</p>
+		<p>With 528 pages and 2,000 photographs illustrating 67 sequences, this book is an essential resource for all yoga teachers and for anyone interested in desgining their own classes. </p>
+		<i>North Atlantic Books, 2012. - ISBN 978-1583944974</i>
+	</div>
+
+</div>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<h2><%= link_to 'Yoga Adjustments', yogaadj_url, :title => 'Yoga Adjustments' %></h2>
+<div class="container_24">
+
+<div class="grid_8">
+	<%= link_to image_tag(url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/yoga_adjustments_cover.jpg")), yogaadj_url, :title => 'Yoga Adjustments' %>
+</div>
+
+<div class="grid_16">
+	<strong>Coming Spring 2014!</strong><br>
+	<i>From the Publisher:</i>
+	<p>Stephens presents how to teach over one hundred key yoga postures (asanas) for beginning to seriously advanced practices, covering the philosophy of yoga practice, the sensibilities of touch in teaching yoga, the seven principles of hands-on yoga teaching, and the twenty-five most effective methods of tactile cueing. With over 1,000 unique instructional photos and explanatory captions explaining precise ways of guiding a variety of flowing sequences as well as the most widely taught standing postures, arm balances, core integration movements, backbends, twists, forward bends, hip openers and inversions, <strong><i>Yoga Adjustments</i></strong> is an invaluable resource for all yoga teachers and teacher trainers.</p>
+	<i>North Atlantic Books, 2010.</i>
+</div>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<h2>Current Writing Projects</h2>
+
+<ul class="list1">
+<li>A foundational book on the nature of the bodymind and yoga practice.</li>
+<li>An exploration of how dualisms confuse yoga practice and undermine clear awareness.</li>
+<li>Various articles on teaching yoga.</li>
+<li>A yoga recipe book.</li>
+<li>A book of haiku.</li>
+</ul>
+
+<%= content_for :side do %>
+	<%= render 'pages/side_books' %>
+<% end %>
+
+<% content_for :top do %>
+	<%= render 'pages/top_books' %> 
+<% end %>

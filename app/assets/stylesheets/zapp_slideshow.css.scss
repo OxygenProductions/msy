@@ -4,12 +4,11 @@
 	padding: 30px;
 	height: 700px;
 	.flexslider {
+		height: 600px;
 		width: 800px;
+		overflow: hidden;
 		left: 680px;
 		top: 90px;
-		> li {
-			width: 800px;
-		}
 	}
 	.flex-control-nav {
 		position: absolute;

@@ -1,4 +1,10 @@
 <h1>Booking Mark</h1>
+
+<%= image_tag(url_cdn("images/bookmark2.jpg")) %>
+
+<div class="clear"></div>
+<p>&nbsp</p>
+
 <%= render 'workshops/booking' %>
 
 <p>&nbsp</p>
@@ -6,3 +12,7 @@
 
 <h1>Workshops</h1>
 <%= render 'workshops/calendar' %>
+
+<% content_for :top do %>
+	<%= render 'pages/top_bookmark' %>
+<% end %>

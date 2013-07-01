@@ -5,12 +5,11 @@ class ClassesController < ApplicationController
 	end
 	
 	def newtoyoga
-		
-		render layout: 'full'
+		#render layout: 'full'
 	end
 	
 	def scyoga
-		render layout: 'full'
+		#render layout: 'full'
 	end
 
 end

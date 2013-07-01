@@ -1,0 +1,21 @@
+<div id="tag_cloud">
+  <% tag_cloud Post.post_tag_counts, %w{s m l} do |tag, css_class| %>
+    <%= link_to tag.name, "/blog?tag=#{tag.name}", class: css_class %>
+  <% end %>
+  <%= link_to 'All Posts', blog_url, :class => 'all' %>
+</div>
+
+<div class="posts">
+	<% for post in @posts %>
+		<div class="post list-item">
+			<div class="title">
+				<h2><a href="/blog/<%= post.permalink %>" title="<%= post.title %>"><%= post.title %></a></h2>
+			</div>
+			<div class="summary">
+				<%= post.summary %>
+			</div>
+			<a href="/blog/<%= post.permalink %>" title="<%= post.title %>">See More...</a>
+		</div>
+	<% end %>
+	<%= paginate @posts %>
+</div>

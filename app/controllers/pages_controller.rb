@@ -74,5 +74,40 @@ class PagesController < ApplicationController
 	#Contact
 	def contact
 	end
+	
+	def poetry
+		render layout: 'left'
+	end
+	
+	def books
+		render layout: 'left'
+	end
+	
+	def teachingyoga
+		render layout: 'left'
+	end
+	
+	def yogaseq
+		render layout: 'left'
+	end
+	
+	def yogaadj
+		render layout: 'left'
+	end
+	
+	def about
+	end
+	
+	def gratitude
+		render layout: 'full'
+	end
+	
+	def scholarships
+		render layout: 'full'
+	end
+	
+	def newsletters
+		render layout: 'left'
+	end
 
 end
