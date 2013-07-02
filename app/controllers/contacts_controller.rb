@@ -7,7 +7,8 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(params[:contact])
     if @contact.valid?
-      # TODO send contact here
+      UserMailer.contact_email(@contact).deliver
+      UserMailer.contact_admin_email(@contact).deliver
       redirect_to root_url, notice: "Message sent! Thank you for contacting us."
     else
       render "new", layout: 'left'

@@ -45,3 +45,4 @@ gem "videojs_rails"
 gem "active_attr"
 gem "ckeditor"
 gem "mini_magick"
+#gem "letter_opener", :group => :development

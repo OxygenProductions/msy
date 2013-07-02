@@ -8,7 +8,8 @@ class AppliesController < ApplicationController
   def create
     @apply = Apply.new(params[:apply])
     if @apply.valid?
-      # TODO send contact here
+      UserMailer.ytt_email(@apply).deliver
+      UserMailer.ytt_admin_email(@apply).deliver
       redirect_to root_url, notice: "Application sent! We will contact you shortly."
     else
       render "new", layout: 'full'
