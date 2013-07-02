@@ -3,6 +3,7 @@ class WorkshopsController < ApplicationController
 	def index
 		@workshops = Workshop.all
 		@workshops_by_date = @workshops.group_by(&:date)
+		@workshops_by_end_date = @workshops.group_by(&:end_date)
 		@date = params[:date] ? Date.parse(params[:date]) : Date.today
 		render layout: 'full'
 	end

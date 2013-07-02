@@ -7,6 +7,14 @@ $color: #000;
 $size: 15px;
 $line_height: 20px;
 
+.block2 {
+	height: 575px;
+	.flexslider {
+		margin: 0px 0 0 -700px;
+		width: 1400px;
+	}
+}
+
 body {
 	color: $color;
 	font-size: $size;

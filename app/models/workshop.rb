@@ -1,3 +1,3 @@
 class Workshop < ActiveRecord::Base
-  attr_accessible :content, :date, :summary, :title
+  attr_accessible :content, :date, :summary, :title, :end_date
 end

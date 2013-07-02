@@ -4,14 +4,29 @@
     <%= @date.strftime("%B %Y") %>
     <%= link_to ">", date: @date.next_month %>
   </h2>
+  
+  <% date_start = false %>
+  <% current_workshop = false %> 
+  
   <%= calendar @date do |date| %>
     <%= date.day %>
     <% if @workshops_by_date[date] %>
-      <ul>
         <% @workshops_by_date[date].each do |workshop| %>
-          <li><%= link_to workshop.title, workshops_show_url(workshop) %></li>
+          <% date_start = date %>
+          <% current_workshop = workshop %>
         <% end %>
-      </ul>
     <% end %>
+    
+    <% if date_start != false %>
+    	<% if @workshops_by_end_date[date] %>
+    		<% @workshops_by_end_date[date].each do |workshop| %>
+          <% date_start = false %> 
+        <% end %>
+      <% end %>  
+      <ul><li><%= link_to current_workshop.title, workshops_show_url(current_workshop) %></li></ul>
+    <% end %>
+
+    
+    
   <% end %>
 </div>

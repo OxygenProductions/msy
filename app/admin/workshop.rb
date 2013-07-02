@@ -13,6 +13,7 @@ ActiveAdmin.register Workshop do
     f.inputs "Workshop Details" do       
       f.input :title
       f.input :date, :as => :datepicker
+      f.input :end_date, :as => :datepicker
       f.input :summary
       f.input :content, :as => :ckeditor
       
