@@ -11,7 +11,7 @@ class UserMailer < ActionMailer::Base
   
   def contact_admin_email(contact)
   	@contact = contact
-  	mail(:to => "elliot.weaver@gmail.com", :subject => "New Contact Recieved")
+  	mail(:to => "mark@markstephensyoga.com", :subject => "New Contact Recieved")
   end
   
   def ytt_email(ytt)
@@ -20,7 +20,7 @@ class UserMailer < ActionMailer::Base
   
   def ytt_admin_email(ytt)
   	@ytt = ytt
-  	mail(:to => "elliot.weaver@gmail.com", :subject => "New YTT Application Recieved")
+  	mail(:to => "mark@markstephensyoga.com", :subject => "New YTT Application Recieved")
   end
   
 end
