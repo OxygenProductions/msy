@@ -10,7 +10,7 @@
 
 /* FlexSlider Necessary Styles
 *********************************/ 
-.flexslider {margin: 0px 0 0 -600px;width:1200px;position: absolute;left: 50%;top: 0;}
+.flexslider {margin: 0px 0 0 -700px;width: 1400px;position: absolute;left: 50%;top: 0;}
 .flexslider .slides{height:350px;}
 .flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;position: relative;} /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides img {width: 100%; display: block;}
