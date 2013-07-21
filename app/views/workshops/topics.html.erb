@@ -140,7 +140,15 @@
 <p><strong>Format Options:</strong> 6-20 hours on selected topics</p>
 
 <% content_for :top do %>
-	<%= render 'workshops/top' %>
+	<div class="block2">
+      <div class="flexslider">
+         <ul class="slides">
+          <li><%= image_tag url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/slide-ytt-summer.jpg") %></li>
+          <li><%= image_tag url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/slide-refine.jpg") %></li>
+          <li><%= image_tag url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/slide-pre.jpg") %></li>
+         </ul>
+      </div>
+	 </div>
 <% end %>
 
 <% content_for :side do %>

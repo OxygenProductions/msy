@@ -12,6 +12,7 @@ class WorkshopsController < ApplicationController
 		@workshop = Workshop.find(params[:id])
 		@workshops = Workshop.all
 		@workshops_by_date = @workshops.group_by(&:date)
+		@workshops_by_end_date = @workshops.group_by(&:end_date)
 		@date = params[:date] ? Date.parse(params[:date]) : Date.today
 		render layout: 'full'
 	end
@@ -23,6 +24,7 @@ class WorkshopsController < ApplicationController
 	def book
 		@workshops = Workshop.all
 		@workshops_by_date = @workshops.group_by(&:date)
+		@workshops_by_end_date = @workshops.group_by(&:end_date)
 		@date = params[:date] ? Date.parse(params[:date]) : Date.today
 		render layout: 'full'
 	end

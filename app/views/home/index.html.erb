@@ -118,5 +118,15 @@
 <% end %>
 
 <% content_for :top do %>
-	<%= render 'home/top' %> 
+	<div class="block2">
+      <div class="flexslider">
+         <ul class="slides">
+          <li><%= image_tag url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/slide-ytt.jpg") %></li>
+          <li><%= image_tag url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/slide-cew.jpg") %></li>
+          <li><%= image_tag url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/slide-refine.jpg") %></li>
+          <li><%= image_tag url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/slide-ytt-summer.jpg") %></li>
+          <li><%= image_tag url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/slide-ytt-retreat.jpg") %></li>
+         </ul>
+      </div>
+	 </div>
 <% end %>

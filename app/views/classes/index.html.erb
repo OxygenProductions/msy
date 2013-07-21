@@ -21,5 +21,14 @@
 <%= render 'classes/buypasses' %>
 
 <% content_for :top do %>
-	<%= render 'classes/top' %>
+	<div class="block2">
+      <div class="flexslider">
+         <ul class="slides">
+          <li><%= image_tag url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/slide-dog.jpg") %></li>
+          <li><%= image_tag url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/slide-practice.jpg") %></li>
+          <li><%= image_tag url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/slide-helping.jpg") %></li>
+          <li><%= image_tag url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/slide-balance.jpg") %></li>
+         </ul>
+      </div>
+	 </div>
 <% end %>

@@ -6,5 +6,11 @@
 <% end %>
 
 <% content_for :top do %>
-	<%= render 'pages/top_resources' %> 
+	<div class="block2">
+      <div class="flexslider">
+         <ul class="slides">
+          <li><%= image_tag url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/slide-videos.jpg") %></li>
+         </ul>
+      </div>
+	 </div> 
 <% end %>
