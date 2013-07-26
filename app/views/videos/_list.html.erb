@@ -1,5 +1,14 @@
 <h1 class="ind3">Videos</h1>
 
+<p>These short instructional videos show the very basic fundamentals of how to teach the asanas decribed in Teaching Yoga. There are over 75 videos available here now, with more being posted every day. Please use the selector below to choose asanas by asana family or browse the entire collection.</p>
+
+<h2>Coming Soon:</h2>
+
+<ul>
+	<li>The Yoga Sequencing Videos - 67 class-length videos covering all the sequences in the book Yoga Sequencing (first releases Fall 2013)</li>
+	<li>The Yoga 360 Teacher Training Videos - 125 short videos showing nuanced ways to guide the practice (first releases January 2014)</li>
+</ul>
+
 <div id="tag_cloud">
   <% tag_cloud Video.video_tag_counts, %w{s m l} do |tag, css_class| %>
     <%= link_to tag.name, "/video?tag=#{tag.name}", class: css_class %>

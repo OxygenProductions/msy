@@ -6,13 +6,13 @@ class SlideshowsController < ApplicationController
 		else
 			@slideshows = Slideshow.order("weight ASC") #.page(params[:page]).per(9)
 		end
-		render layout: 'full'
+		render layout: 'left'
 	end
 
 	def show
 		@slideshows = Slideshow.order("weight ASC") #.page(params[:page]).per(9)
 		@slideshow = Slideshow.find(params[:id])
-		render layout: 'full'
+		render layout: 'left'
 	end
 
 end

@@ -1,4 +1,4 @@
-<h2>Upcoming Workshops</h2>
+<h2>Calendar</h2>
 
 <ul class="list1">
 <% for event in Workshop.limit(5).where('date >= ?', Date.current).order("date ASC") do %>
@@ -6,3 +6,5 @@
 
 <% end %>
 </ul>
+
+<a href="/workshops">View more</a>

@@ -6,13 +6,13 @@ class AudiosController < ApplicationController
 		else
 			@audios = Audio.order("weight ASC") #.page(params[:page]).per(9)
 		end
-		render layout: 'full'
+		render layout: 'left'
 	end
 
 	def show
 		@audios = Audio.order("weight ASC") #.page(params[:page]).per(9)
 		@audio = Audio.find(params[:id])
-		render layout: 'full'
+		render layout: 'left'
 	end
 
 end

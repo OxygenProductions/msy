@@ -1,13 +1,26 @@
-<div class="slideshow-player">
-	<h2><%= @slideshow.title %></h2>
-	<%= raw @slideshow.content %>
-</div>
+
 
 <%= render 'slideshows/list' %>
 
 <% content_for :side do %>
   <h2 class="ind2">Links</h2>
 	<%= render 'layouts/subnav' %> 
+	
+	<div class="clear"></div>
+	<p>&nbsp;</p>
+	
+	<%= render 'pages/side_books' %>
+
+	<div class="clear"></div>
+	<p>&nbsp;</p>
+	
+	<%= render 'pages/side_upcoming' %>
+	
+	<div class="clear"></div>
+	<p>&nbsp;</p>
+	
+	<%= render 'pages/side_newsletter' %>
+	
 <% end %>
 
 <% content_for :top do %>
@@ -18,4 +31,23 @@
          </ul>
       </div>
 	 </div> 
+	
+	<div class="block3">
+      <section id="content">
+        <div class="container_24">
+          <div class="wrapper">
+          
+          	<div class="slideshow-player">
+							<h2><%= @slideshow.title %></h2>
+							<%= raw @slideshow.content %>
+						</div>
+          
+          </div>
+        </div>
+      </section>
+   </div> 
+	 
 <% end %>
+
+
+	

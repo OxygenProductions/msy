@@ -1,9 +1,83 @@
-<h2 class="ind3">Resources</h2>
+<h1 class="ind3">Resources</h1>
+
+<p>These resources are designed to complement the learning and insights developed in your yoga practice, training, and teaching. While designed primarily for yoga teachers, all levels of students should find them helpful.</p>
+
+<p>The best yoga teacher one will ever have is alive and well inside. Much of the practice is about learning to hear and honor that inner teacher on one's unique path. It's also helpful to have an experienced and informed outer teacher to offer guidance along the way, and for all of us - students, teachers, trainers - to share and stay open to always learning something new.  These resources are offered in that spirit.</p>
+
+<p>Explore, enjoy, play, learn and keep breathing! </p>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<h2><a href="/video">Yoga Videos</a></h2>
+<%= image_tag url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/alanding-video.jpg") %>
+<br><br>
+<ul class="list1">
+<li>Teaching Yoga Videos </li>
+<li>Yoga Sequencing Videos </li>
+<li>The 360 Series</li>
+</ul>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<h2><a href="/audio">Audio Podcasts</a></h2>
+<%= image_tag url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/alanding-audio.jpg") %>
+<br><br>
+<ul class="list1">
+<li>Guided Asana Practices</li>
+<li>Guided Pranayama & Meditation</li>
+<li>Yoga Philosophy & History</li>
+<li>Teaching Methods & Techniques</li>
+</ul> 
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<h2><a href="/slideshow">Slideshows</a></h2>
+<%= image_tag url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/aslidehsows.jpg") %>
+<br><br>
+<ul class="list1">
+<li>Step-by-Step Photos for 108 Asanas</li>
+<li>All Asana Families</li>
+<li>Beginning to Seriously Advanced</li>
+</ul>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+<h2><a href="/reading">Written Word</a></h2>
+<%= image_tag url_for_cdn("https://s3-us-west-1.amazonaws.com/markstephensyoga/uploads/images/abook.jpg") %>
+<br><br>
+<ul class="list1">
+<li>Book Excerpts & Information</li>
+<li>Articles & Reflections</li>
+<li>Inspiring Poetry & Prose</li>
+</ul>
+
+<div class="clear"></div>
+<p>&nbsp;</p>
 
 
 <% content_for :side do %>
   <h2 class="ind2">Links</h2>
 	<%= render 'layouts/subnav' %> 
+	
+	<div class="clear"></div>
+	<p>&nbsp;</p>
+	
+	<%= render 'pages/side_books' %>
+
+	<div class="clear"></div>
+	<p>&nbsp;</p>
+	
+	<%= render 'pages/side_upcoming' %>
+	
+	<div class="clear"></div>
+	<p>&nbsp;</p>
+	
+	<%= render 'pages/side_newsletter' %>
+	
 <% end %>
 
 <% content_for :top do %>

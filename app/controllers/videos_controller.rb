@@ -6,13 +6,13 @@ class VideosController < ApplicationController
 		else
 			@videos = Video.order("weight ASC") #.page(params[:page]).per(9)
 		end
-		render layout: 'full'
+		render layout: 'left'
 	end
 
 	def show
 		@videos = Video.order("weight ASC") #.page(params[:page]).per(9)
 		@video = Video.find(params[:id])
-		render layout: 'full'
+		render layout: 'left'
 	end
 
 end

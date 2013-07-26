@@ -1,5 +1,7 @@
 <h1 class="ind3">Slideshows</h1>
 
+<p>These slideshows offer step-by-step demonstrations for getting into each of 108 yoga asanas. They consist of over 500 photos taken in less than five hours in a single setting.</p>
+
 <div id="tag_cloud">
   <% tag_cloud Slideshow.slideshow_tag_counts, %w{s m l} do |tag, css_class| %>
     <%= link_to tag.name, "/slideshow?tag=#{tag.name}", class: css_class %>
