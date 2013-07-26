@@ -74,6 +74,7 @@ SimpleNavigation::Configuration.run do |navigation|
     	classes_nav.dom_class = 'list2'
     end
     primary.item :ytt, 'Resources', resources_url do |resources_nav|
+    	resources_nav.item :resources, 'Overview', resources_url, :highlights_on => /resourcces/
     	resources_nav.item :video, 'Video', video_url, :highlights_on => /video/
     	resources_nav.item :audio, 'Audio', audio_url, :highlights_on => /audio/
     	resources_nav.item :reading, 'Readings', reading_url, :highlights_on => /reading/
